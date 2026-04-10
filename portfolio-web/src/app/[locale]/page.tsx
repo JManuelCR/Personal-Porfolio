@@ -5,15 +5,23 @@ import {
   getTechnicalSnapshot,
 } from "@/lib/context-dictionaries";
 import { PortfolioHomeTemplate } from "@/components/templates/PortfolioHomeTemplate";
+import type { AppLocale } from "@/i18n/routing";
 
-export default async function LocaleHomePage() {
-  const [identitySnapshot, technicalSnapshot, catalog, tProfile, tHero] =
+interface LocaleHomePageProps {
+  params: Promise<{ locale: AppLocale }>;
+}
+
+export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
+  const { locale } = await params;
+
+  const [identitySnapshot, technicalSnapshot, catalog, tProfile, tHero, tControls] =
     await Promise.all([
       getIdentitySnapshot(),
       getTechnicalSnapshot(),
       getProjectCatalog(),
-      getTranslations("profile"),
-      getTranslations("hero"),
+      getTranslations({ locale, namespace: "profile" }),
+      getTranslations({ locale, namespace: "hero" }),
+      getTranslations({ locale, namespace: "controls" }),
     ]);
 
   const identityHighlights = identitySnapshot
@@ -43,6 +51,10 @@ export default async function LocaleHomePage() {
         technical: tHero("technical"),
         catalog: tHero("catalog"),
         catalogSource: tHero("catalogSource"),
+        controlsTheme: tControls("theme"),
+        controlsLanguage: tControls("language"),
+        themeDark: tControls("dark"),
+        themeLight: tControls("light"),
       }}
     />
   );

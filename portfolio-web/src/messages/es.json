@@ -1,19 +1,21 @@
 {
   "profile": {
     "name": "Jose Manuel Cabrera Rojas",
-    "title": "Senior Full-Stack Developer | Business Analytics Candidate"
+    "title": "Senior Full-Stack Developer | Candidato a Business Analytics"
   },
   "hero": {
-    "badge": "Senior Developer a Business Analytics",
-    "headline": "Engineering data-driven products with strategic business impact.",
+    "badge": "De Senior Developer hacia Business Analytics",
+    "headline": "Diseñando productos data-driven con impacto estratégico de negocio.",
     "description": "Portafolio profesional orientado a arquitectura Full-Stack, visualizacion analitica y ejecucion enfocada en time-to-market.",
-    "identity": "Identity Snapshot",
-    "technical": "Technical North Star",
-    "catalog": "Project Catalog",
-    "catalogSource": "Source: .context/project-catalog.json"
+    "identity": "Resumen de identidad",
+    "technical": "Norte técnico",
+    "catalog": "Catálogo de proyectos",
+    "catalogSource": "Fuente: .context/project-catalog.json"
   },
   "controls": {
     "theme": "Tema",
-    "language": "Idioma"
+    "language": "Idioma",
+    "dark": "Oscuro",
+    "light": "Claro"
   }
 }

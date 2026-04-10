@@ -1,6 +1,7 @@
 "use client";
 
 import { useLocale } from "next-intl";
+import Cookies from "js-cookie";
 import type { AppLocale } from "@/i18n/routing";
 
 const supportedLocales: AppLocale[] = ["es", "en"];
@@ -24,9 +25,12 @@ export function LanguageSwitcher({ value, onChange }: LanguageSwitcherProps) {
       return;
     }
 
-    const currentPath = window.location.pathname;
-    const pathWithoutLocale = currentPath.replace(/^\/(es|en)(?=\/|$)/, "") || "/";
-    window.location.assign(`/${nextLocale}${pathWithoutLocale}`);
+    Cookies.set("NEXT_LOCALE", nextLocale, { expires: 365, sameSite: "lax" });
+
+    const { pathname: currentPathname, search, hash } = window.location;
+    const pathWithoutLocale =
+      currentPathname.replace(/^\/(es|en)(?=\/|$)/, "") || "/";
+    window.location.assign(`/${nextLocale}${pathWithoutLocale}${search}${hash}`);
   };
 
   return (

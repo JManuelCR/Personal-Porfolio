@@ -19,6 +19,10 @@ interface PortfolioHomeTemplateProps {
     technical: string;
     catalog: string;
     catalogSource: string;
+    controlsTheme: string;
+    controlsLanguage: string;
+    themeDark: string;
+    themeLight: string;
   };
 }
 
@@ -39,8 +43,14 @@ export function PortfolioHomeTemplate({
 
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-6 py-14 md:px-12 md:py-20">
         <section className="flex items-center justify-end gap-3">
+          <p className="text-xs uppercase tracking-[0.16em] text-muted">
+            {content.controlsLanguage}
+          </p>
           <LanguageSwitcher />
-          <ThemeToggle />
+          <p className="text-xs uppercase tracking-[0.16em] text-muted">
+            {content.controlsTheme}
+          </p>
+          <ThemeToggle darkLabel={content.themeDark} lightLabel={content.themeLight} />
         </section>
 
         <section className="grid gap-10 rounded-3xl border border-line bg-panel p-8 backdrop-blur-xl md:grid-cols-[1.2fr_0.8fr] md:p-12">
