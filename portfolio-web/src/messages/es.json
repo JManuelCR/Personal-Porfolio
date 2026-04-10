@@ -16,6 +16,23 @@
     "theme": "Tema",
     "language": "Idioma",
     "dark": "Oscuro",
-    "light": "Claro"
+    "light": "Claro",
+    "navExperience": "Trayectoria",
+    "navStory": "Historia"
+  },
+  "experience": {
+    "title": "Trayectoria de 7 años en industria",
+    "subtitle": "Experiencia acumulada en telecomunicaciones y automotriz, construyendo soluciones tecnicas con foco en rendimiento, confiabilidad y escalabilidad operativa.",
+    "timelineTitle": "2018 -> 2025",
+    "telecomTitle": "Telecomunicaciones",
+    "telecomDetail": "Implementacion de soluciones conectadas para operaciones de alta disponibilidad y tiempos de respuesta criticos.",
+    "automotiveTitle": "Automotriz",
+    "automotiveDetail": "Ingenieria aplicada para procesos industriales, integracion de sistemas y mejora continua orientada a negocio."
+  },
+  "story": {
+    "title": "Historia y giro hacia Data Science",
+    "subtitle": "La evolucion profesional conecta la ingenieria Full-Stack con analitica predictiva para reducir incertidumbre y acelerar decisiones de negocio.",
+    "focusLabel": "Enfoque actual",
+    "focusValue": "Business Analytics (EGADE) + Data-Driven Product Engineering"
   }
 }

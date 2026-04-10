@@ -22,3 +22,8 @@ When I ask you to build a section, start by saying: "Referencing [Dictionary Nam
 - **Rule:** Every text string MUST be wrapped in a translation hook. No hardcoded text in components.
 - **Persistence:** User preferences for language and theme must persist in `localStorage` or via cookies for SSR consistency.
 - **Accessibility:** Ensure that theme toggles and language switchers are accessible (ARIA labels) and follow the Atomic Design "Atom" pattern.
+
+# Strict Structural Rules
+- **NO Flat Folders:** No permitas que los archivos `.tsx`, `.test.tsx` o `.stories.tsx` vivan en la raíz de `/atoms`, `/molecules` u `/organisms`.
+- **Atomic Isolation:** Todo componente nuevo debe nacer en su propia carpeta con su respectivo `index.ts`.
+- **Consistency:** Esta regla se aplica también a `hooks/`, `services/` y `utils/`. Cada utilidad compleja debe seguir el patrón de carpeta + index.

@@ -42,9 +42,21 @@
   - **Librería:** `next-intl` o `react-i18next`.
   - [cite_start]**Idiomas:** Inglés (Advanced) y Español (Native) como base.
   - **Estrategia:** Delegar los textos a archivos JSON de traducción (`en.json`, `es.json`) para mantener los componentes "puros".
-  
+
   ## Advanced Visual Effects (Parallax)
 - **Library:** Framer Motion (useScroll, useTransform) o Lenis para Smooth Scroll.
 - **Implementation:** - **Layered Parallax:** Desplazamiento de elementos decorativos (nodos de grafos, líneas de código, grids de datos) a diferentes velocidades.
   - **Scroll-Linked Animations:** Revelado de secciones de texto y gráficos de "Business Analytics" conforme el usuario hace scroll.
   - **Performance:** Forzar el uso de GPU (translate3d) y evitar el cambio de propiedades que disparen el "layout reflow".
+
+  ## Folder Structure & Export Pattern (Barrel Exports)
+- **Component Encapsulation:** Cada componente DEBE tener su propia subcarpeta.
+- **Estructura por Componente:**
+  - `components/[atomic-level]/[ComponentName]/`
+    - `index.ts` (Archivo de exportación)
+    - `[ComponentName].tsx` (Lógica y estructura)
+    - `[ComponentName].test.tsx` (Pruebas unitarias)
+    - `[ComponentName].stories.tsx` (Documentación Storybook)
+    - `[ComponentName].module.css` (Si aplica estilos locales)
+- **Barrel Indexing:** Cada nivel de Atomic Design (atoms, molecules, etc.) debe tener un `index.ts` que centralice y re-exporte todos los componentes de sus subcarpetas.
+- **Import Rules:** Prohibido importar directamente desde el archivo `.tsx`. Siempre se debe importar desde el `index` de la carpeta del componente o del nivel atómico.

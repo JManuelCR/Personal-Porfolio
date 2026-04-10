@@ -16,6 +16,23 @@
     "theme": "Theme",
     "language": "Language",
     "dark": "Dark",
-    "light": "Light"
+    "light": "Light",
+    "navExperience": "Experience",
+    "navStory": "Story"
+  },
+  "experience": {
+    "title": "7-year industry trajectory",
+    "subtitle": "Hands-on delivery across telecommunications and automotive, building technical solutions focused on performance, reliability and operational scale.",
+    "timelineTitle": "2018 -> 2025",
+    "telecomTitle": "Telecommunications",
+    "telecomDetail": "Implementation of connected solutions for high-availability operations and critical response-time environments.",
+    "automotiveTitle": "Automotive",
+    "automotiveDetail": "Applied engineering for industrial processes, systems integration and continuous improvement aligned with business impact."
+  },
+  "story": {
+    "title": "Story and Data Science transition",
+    "subtitle": "The professional evolution bridges Full-Stack engineering with predictive analytics to reduce uncertainty and accelerate business decisions.",
+    "focusLabel": "Current focus",
+    "focusValue": "Business Analytics (EGADE) + Data-Driven Product Engineering"
   }
 }

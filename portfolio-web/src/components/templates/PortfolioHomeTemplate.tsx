@@ -1,8 +1,10 @@
 import { LanguageSwitcher } from "@/components/atoms/LanguageSwitcher";
 import { Pill } from "@/components/atoms/Pill";
 import { SectionTitle } from "@/components/atoms/SectionTitle";
+import { ExperienceParallaxSection } from "@/components/organisms/ExperienceParallaxSection";
 import { ThemeToggle } from "@/components/atoms/ThemeToggle";
 import { ProjectCard } from "@/components/organisms/ProjectCard";
+import { StoryTransitionSection } from "@/components/organisms/StoryTransitionSection";
 import type { CatalogProject } from "@/types/portfolio";
 
 interface PortfolioHomeTemplateProps {
@@ -23,6 +25,23 @@ interface PortfolioHomeTemplateProps {
     controlsLanguage: string;
     themeDark: string;
     themeLight: string;
+    navExperience: string;
+    navStory: string;
+    experience: {
+      title: string;
+      subtitle: string;
+      timelineTitle: string;
+      telecomTitle: string;
+      telecomDetail: string;
+      automotiveTitle: string;
+      automotiveDetail: string;
+    };
+    story: {
+      title: string;
+      subtitle: string;
+      focusLabel: string;
+      focusValue: string;
+    };
   };
 }
 
@@ -43,6 +62,12 @@ export function PortfolioHomeTemplate({
 
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-6 py-14 md:px-12 md:py-20">
         <section className="flex items-center justify-end gap-3">
+          <a href="#trayectoria" className="chip chip-small">
+            {content.navExperience}
+          </a>
+          <a href="#historia" className="chip chip-small">
+            {content.navStory}
+          </a>
           <p className="text-xs uppercase tracking-[0.16em] text-muted">
             {content.controlsLanguage}
           </p>
@@ -101,6 +126,10 @@ export function PortfolioHomeTemplate({
             ))}
           </div>
         </section>
+
+        <ExperienceParallaxSection content={content.experience} />
+
+        <StoryTransitionSection content={content.story} />
 
         <section className="space-y-6">
           <div className="flex items-end justify-between gap-4">

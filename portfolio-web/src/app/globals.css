@@ -188,6 +188,102 @@ body {
   color: var(--foreground);
 }
 
+.experience-shape,
+.story-shape {
+  position: absolute;
+  pointer-events: none;
+}
+
+.shape-grid {
+  inset: 0;
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--line) 60%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--line) 60%, transparent) 1px, transparent 1px);
+  background-size: 42px 42px;
+  opacity: 0.32;
+}
+
+.shape-ring {
+  width: 22rem;
+  height: 22rem;
+  right: -4rem;
+  top: -6rem;
+  border-radius: 9999px;
+  border: 2px dashed color-mix(in srgb, var(--accent-strong) 55%, transparent);
+  opacity: 0.4;
+}
+
+.shape-glow {
+  width: 18rem;
+  height: 18rem;
+  left: -2rem;
+  bottom: -5rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent-strong) 35%, transparent) 0%, transparent 70%);
+  filter: blur(8px);
+}
+
+.experience-card {
+  border: 1px solid color-mix(in srgb, var(--line-strong) 82%, transparent);
+  background: color-mix(in srgb, var(--panel-strong) 88%, transparent);
+  border-radius: 1rem;
+  padding: 1.1rem;
+}
+
+.experience-card-title {
+  font-size: 0.84rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+
+.experience-card-copy {
+  margin-top: 0.7rem;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 0.93rem;
+}
+
+.story-rail {
+  left: 0;
+  top: 1.2rem;
+  bottom: 1.2rem;
+  width: 5px;
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-strong) 75%, transparent), transparent);
+}
+
+.story-focus {
+  width: 20rem;
+  height: 20rem;
+  right: -6rem;
+  top: -4rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent-strong) 24%, transparent) 0%, transparent 72%);
+  filter: blur(3px);
+}
+
+.story-focus-card {
+  border: 1px solid color-mix(in srgb, var(--line-strong) 78%, transparent);
+  background: color-mix(in srgb, var(--panel) 82%, transparent);
+  border-radius: 1rem;
+  padding: 1rem 1.1rem;
+  max-width: 50rem;
+}
+
+.story-focus-label {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-strong);
+  font-size: 0.75rem;
+}
+
+.story-focus-value {
+  margin-top: 0.45rem;
+  color: var(--foreground);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
 @keyframes drift {
   from {
     transform: translateY(-12px) scale(1);

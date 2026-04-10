@@ -14,7 +14,16 @@ interface LocaleHomePageProps {
 export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
   const { locale } = await params;
 
-  const [identitySnapshot, technicalSnapshot, catalog, tProfile, tHero, tControls] =
+  const [
+    identitySnapshot,
+    technicalSnapshot,
+    catalog,
+    tProfile,
+    tHero,
+    tControls,
+    tExperience,
+    tStory,
+  ] =
     await Promise.all([
       getIdentitySnapshot(),
       getTechnicalSnapshot(),
@@ -22,6 +31,8 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
       getTranslations({ locale, namespace: "profile" }),
       getTranslations({ locale, namespace: "hero" }),
       getTranslations({ locale, namespace: "controls" }),
+      getTranslations({ locale, namespace: "experience" }),
+      getTranslations({ locale, namespace: "story" }),
     ]);
 
   const identityHighlights = identitySnapshot
@@ -55,6 +66,23 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
         controlsLanguage: tControls("language"),
         themeDark: tControls("dark"),
         themeLight: tControls("light"),
+        navExperience: tControls("navExperience"),
+        navStory: tControls("navStory"),
+        experience: {
+          title: tExperience("title"),
+          subtitle: tExperience("subtitle"),
+          timelineTitle: tExperience("timelineTitle"),
+          telecomTitle: tExperience("telecomTitle"),
+          telecomDetail: tExperience("telecomDetail"),
+          automotiveTitle: tExperience("automotiveTitle"),
+          automotiveDetail: tExperience("automotiveDetail"),
+        },
+        story: {
+          title: tStory("title"),
+          subtitle: tStory("subtitle"),
+          focusLabel: tStory("focusLabel"),
+          focusValue: tStory("focusValue"),
+        },
       }}
     />
   );
