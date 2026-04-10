@@ -17,8 +17,40 @@
     "language": "Idioma",
     "dark": "Oscuro",
     "light": "Claro",
+    "navCertifications": "Certificaciones",
     "navExperience": "Trayectoria",
     "navStory": "Historia"
+  },
+  "certifications": {
+    "eyebrow": "Ruta de validacion",
+    "title": "Certificaciones y senales de especializacion",
+    "subtitle": "Formacion ejecutiva y rutas cloud/data presentadas como evidencia de una transicion solida hacia Business Analytics, Data Science aplicada y plataformas modernas basadas en React 19.",
+    "previous": "Certificacion anterior",
+    "next": "Siguiente certificacion",
+    "statusLabel": "Activa ahora",
+    "dotLabel": "Ir a la certificacion {index}: {title}",
+    "items": [
+      {
+        "badge": "EGADE",
+        "title": "Business Analytics Candidate",
+        "issuer": "EGADE Business School"
+      },
+      {
+        "badge": "AZURE",
+        "title": "Cloud Fundamentals Track",
+        "issuer": "Microsoft Learn"
+      },
+      {
+        "badge": "DATA",
+        "title": "Azure Data Foundations Track",
+        "issuer": "Microsoft Learn"
+      },
+      {
+        "badge": "POWER",
+        "title": "Power BI Reporting Track",
+        "issuer": "Microsoft Learn"
+      }
+    ]
   },
   "experience": {
     "title": "Trayectoria de 7 años en industria",

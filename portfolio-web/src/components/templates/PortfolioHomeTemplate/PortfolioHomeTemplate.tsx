@@ -1,5 +1,10 @@
 import { LanguageSwitcher, Pill, SectionTitle, ThemeToggle } from "@/components/atoms";
-import { ExperienceParallaxSection, ProjectCard, StoryTransitionSection } from "@/components/organisms";
+import {
+  CertificationSlider,
+  ExperienceParallaxSection,
+  ProjectCard,
+  StoryTransitionSection,
+} from "@/components/organisms";
 import type { CatalogProject } from "@/types/portfolio";
 
 interface PortfolioHomeTemplateProps {
@@ -20,8 +25,23 @@ interface PortfolioHomeTemplateProps {
     controlsLanguage: string;
     themeDark: string;
     themeLight: string;
+    navCertifications: string;
     navExperience: string;
     navStory: string;
+    certifications: {
+      eyebrow: string;
+      title: string;
+      subtitle: string;
+      previousLabel: string;
+      nextLabel: string;
+      statusLabel: string;
+      items: Array<{
+        badge: string;
+        title: string;
+        issuer: string;
+        dotLabel: string;
+      }>;
+    };
     experience: {
       title: string;
       subtitle: string;
@@ -56,7 +76,10 @@ export function PortfolioHomeTemplate({
       </div>
 
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-6 py-14 md:px-12 md:py-20">
-        <section className="control-strip flex flex-wrap items-center justify-end gap-3 rounded-full px-4 py-3 md:px-5">
+        <section className="control-strip sticky top-3 z-50 ml-auto flex w-fit flex-wrap items-center justify-end gap-3 rounded-full px-4 py-3 md:px-5">
+          <a href="#certifications" className="chip chip-small">
+            {content.navCertifications}
+          </a>
           <a href="#trayectoria" className="chip chip-small">
             {content.navExperience}
           </a>
@@ -125,6 +148,17 @@ export function PortfolioHomeTemplate({
         <ExperienceParallaxSection content={content.experience} />
 
         <StoryTransitionSection content={content.story} />
+
+        <CertificationSlider
+          eyebrow={content.certifications.eyebrow}
+          title={content.certifications.title}
+          subtitle={content.certifications.subtitle}
+          previousLabel={content.certifications.previousLabel}
+          nextLabel={content.certifications.nextLabel}
+          statusLabel={content.certifications.statusLabel}
+          items={content.certifications.items}
+          autoPlay
+        />
 
         <section className="space-y-6">
           <div className="flex items-end justify-between gap-4">

@@ -11,6 +11,12 @@ interface LocaleHomePageProps {
   params: Promise<{ locale: AppLocale }>;
 }
 
+interface CertificationMessageItem {
+  badge: string;
+  title: string;
+  issuer: string;
+}
+
 export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
   const { locale } = await params;
 
@@ -21,6 +27,7 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
     tProfile,
     tHero,
     tControls,
+    tCertifications,
     tExperience,
     tStory,
   ] =
@@ -31,9 +38,17 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
       getTranslations({ locale, namespace: "profile" }),
       getTranslations({ locale, namespace: "hero" }),
       getTranslations({ locale, namespace: "controls" }),
+      getTranslations({ locale, namespace: "certifications" }),
       getTranslations({ locale, namespace: "experience" }),
       getTranslations({ locale, namespace: "story" }),
     ]);
+
+  const certificationItems = (tCertifications.raw("items") as CertificationMessageItem[]).map(
+    (item, index) => ({
+      ...item,
+      dotLabel: tCertifications("dotLabel", { index: index + 1, title: item.title }),
+    }),
+  );
 
   const identityHighlights = identitySnapshot
     .split("\n")
@@ -66,8 +81,18 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
         controlsLanguage: tControls("language"),
         themeDark: tControls("dark"),
         themeLight: tControls("light"),
+        navCertifications: tControls("navCertifications"),
         navExperience: tControls("navExperience"),
         navStory: tControls("navStory"),
+        certifications: {
+          eyebrow: tCertifications("eyebrow"),
+          title: tCertifications("title"),
+          subtitle: tCertifications("subtitle"),
+          previousLabel: tCertifications("previous"),
+          nextLabel: tCertifications("next"),
+          statusLabel: tCertifications("statusLabel"),
+          items: certificationItems,
+        },
         experience: {
           title: tExperience("title"),
           subtitle: tExperience("subtitle"),

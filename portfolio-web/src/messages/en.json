@@ -17,8 +17,40 @@
     "language": "Language",
     "dark": "Dark",
     "light": "Light",
+    "navCertifications": "Certifications",
     "navExperience": "Experience",
     "navStory": "Story"
+  },
+  "certifications": {
+    "eyebrow": "Validation Track",
+    "title": "Certifications and specialization signals",
+    "subtitle": "Executive education and cloud/data learning tracks positioned as proof of a disciplined transition into Business Analytics, applied Data Science and modern React 19 product delivery.",
+    "previous": "Previous certification",
+    "next": "Next certification",
+    "statusLabel": "Active now",
+    "dotLabel": "Go to certification {index}: {title}",
+    "items": [
+      {
+        "badge": "EGADE",
+        "title": "Business Analytics Candidate",
+        "issuer": "EGADE Business School"
+      },
+      {
+        "badge": "AZURE",
+        "title": "Cloud Fundamentals Track",
+        "issuer": "Microsoft Learn"
+      },
+      {
+        "badge": "DATA",
+        "title": "Azure Data Foundations Track",
+        "issuer": "Microsoft Learn"
+      },
+      {
+        "badge": "POWER",
+        "title": "Power BI Reporting Track",
+        "issuer": "Microsoft Learn"
+      }
+    ]
   },
   "experience": {
     "title": "7-year industry trajectory",
