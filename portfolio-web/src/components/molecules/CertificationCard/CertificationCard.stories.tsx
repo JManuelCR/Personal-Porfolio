@@ -8,6 +8,9 @@ const meta = {
     badge: "AZ-900",
     title: "Azure Fundamentals",
     issuer: "Microsoft Azure",
+    imageUrl:
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fazure-architect.webp?alt=media",
+    skills: ["Azure Architecture", "Cloud Security", "Infrastructure as Code"],
     active: true,
   },
   parameters: {

@@ -1,16 +1,17 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { SectionTitle, SliderArrow, SliderDot } from "@/components/atoms";
 import { CertificationCard } from "@/components/molecules";
 
-const sliderGap = 16;
-
 export interface CertificationSlideItem {
+  id: string;
   badge: string;
   title: string;
   issuer: string;
+  imageUrl: string;
+  skills: string[];
   dotLabel: string;
 }
 
@@ -51,13 +52,12 @@ export function CertificationSlider({
 }: CertificationSliderProps) {
   const viewportRef = useRef<HTMLDivElement | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [viewportWidth, setViewportWidth] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(3);
+  const [direction, setDirection] = useState(1);
 
   useEffect(() => {
     const updateMeasurements = () => {
       const nextWidth = viewportRef.current?.offsetWidth ?? window.innerWidth;
-      setViewportWidth(nextWidth);
       setSlidesPerView(getSlidesPerView(nextWidth));
     };
 
@@ -77,42 +77,49 @@ export function CertificationSlider({
     };
   }, []);
 
-  const maxIndex = Math.max(0, items.length - slidesPerView);
-  const visibleIndex = Math.min(currentIndex, maxIndex);
-  const paginationCount = maxIndex + 1;
-  const activeItem = items[visibleIndex] ?? items[0];
+  const itemCount = items.length;
+  const visibleCount = Math.min(slidesPerView, Math.max(itemCount, 1));
+  const activeIndex = itemCount === 0 ? 0 : ((currentIndex % itemCount) + itemCount) % itemCount;
+  const activeItem = items[activeIndex];
+  const visibleItems = Array.from({ length: visibleCount }, (_, offset) => {
+    const itemIndex = itemCount === 0 ? 0 : (activeIndex + offset) % itemCount;
+    return items[itemIndex];
+  }).filter(Boolean);
 
   useEffect(() => {
-    if (!autoPlay || maxIndex === 0) {
+    if (!autoPlay || itemCount <= 1) {
       return;
     }
 
     const intervalId = window.setInterval(() => {
-      setCurrentIndex((previousIndex) => (previousIndex >= maxIndex ? 0 : previousIndex + 1));
+      setDirection(1);
+      setCurrentIndex((previousIndex) => previousIndex + 1);
     }, autoPlayInterval);
 
     return () => {
       window.clearInterval(intervalId);
     };
-  }, [autoPlay, autoPlayInterval, maxIndex]);
-
-  const offset = useMemo(() => {
-    if (!viewportWidth) {
-      return 0;
-    }
-
-    return visibleIndex * ((viewportWidth + sliderGap) / slidesPerView);
-  }, [slidesPerView, viewportWidth, visibleIndex]);
+  }, [autoPlay, autoPlayInterval, itemCount]);
 
   const movePrevious = () => {
-    setCurrentIndex(visibleIndex <= 0 ? maxIndex : visibleIndex - 1);
+    setDirection(-1);
+    setCurrentIndex((previousIndex) => previousIndex - 1);
   };
 
   const moveNext = () => {
-    setCurrentIndex(visibleIndex >= maxIndex ? 0 : visibleIndex + 1);
+    setDirection(1);
+    setCurrentIndex((previousIndex) => previousIndex + 1);
   };
 
-  const handleDragEnd = (_event: MouseEvent | TouchEvent | PointerEvent, info: { offset: { x: number } }) => {
+  const goToIndex = (index: number) => {
+    setDirection(index >= activeIndex ? 1 : -1);
+    setCurrentIndex(index);
+  };
+
+  const handleDragEnd = (
+    _event: MouseEvent | TouchEvent | PointerEvent,
+    info: { offset: { x: number } },
+  ) => {
     if (info.offset.x <= -60) {
       moveNext();
       return;
@@ -154,71 +161,70 @@ export function CertificationSlider({
               direction="prev"
               ariaLabel={previousLabel}
               onClick={movePrevious}
-              disabled={items.length <= 1}
+              disabled={itemCount <= 1}
             />
             <SliderArrow
               direction="next"
               ariaLabel={nextLabel}
               onClick={moveNext}
-              disabled={items.length <= 1}
+              disabled={itemCount <= 1}
             />
           </div>
         </div>
 
-        <div ref={viewportRef} className="certification-slider-viewport overflow-hidden">
-          <motion.div
-            className="certification-slider-track"
-            style={{ "--slides-per-view": String(slidesPerView) } as CSSProperties}
-            animate={{ x: -offset }}
-            transition={{ type: "spring", stiffness: 220, damping: 28 }}
-            drag={items.length > slidesPerView ? "x" : false}
-            dragElastic={0.08}
-            dragMomentum={false}
-            onDragEnd={handleDragEnd}
-          >
-            {items.map((item, index) => {
-              const isVisible = index >= visibleIndex && index < visibleIndex + slidesPerView;
-
-              return (
-                <motion.div key={`${item.badge}-${item.title}`} layout className="certification-slide">
-                  <CertificationCard {...item} active={isVisible} />
-                </motion.div>
-              );
-            })}
-          </motion.div>
+        <div ref={viewportRef} className="certification-slider-viewport overflow-hidden pt-2">
+          <AnimatePresence initial={false} mode="wait">
+            <motion.div
+              key={`${activeIndex}-${slidesPerView}`}
+              className="certification-slider-track"
+              initial={{ x: direction > 0 ? 72 : -72, opacity: 0.5 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: direction > 0 ? -72 : 72, opacity: 0.5 }}
+              transition={{ type: "spring", stiffness: 220, damping: 28 }}
+              drag={itemCount > 1 ? "x" : false}
+              dragElastic={0.08}
+              dragMomentum={false}
+              onDragEnd={handleDragEnd}
+              style={{ "--slides-per-view": String(visibleCount) } as CSSProperties}
+            >
+              {visibleItems.map((item, index) => (
+                <div key={`${item.id}-${index}-${activeIndex}`} className="certification-slide">
+                  <CertificationCard {...item} active={index === 0} />
+                </div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
         </div>
 
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex flex-wrap items-center gap-3">
-            {Array.from({ length: paginationCount }, (_, index) => {
-              const item = items[index] ?? items[0];
-
-              return (
-                <SliderDot
-                  key={`${item.badge}-${index}`}
-                  active={visibleIndex === index}
-                  ariaLabel={item.dotLabel}
-                  onClick={() => setCurrentIndex(index)}
-                />
-              );
-            })}
+            {items.map((item, index) => (
+              <SliderDot
+                key={`${item.id}-${index}`}
+                active={activeIndex === index}
+                ariaLabel={item.dotLabel || item.title}
+                onClick={() => goToIndex(index)}
+              />
+            ))}
           </div>
 
           <div className="certification-slider-status" aria-live="polite">
             <span className="certification-slider-status-label">{statusLabel}</span>
             <AnimatePresence mode="wait">
-              <motion.p
-                key={`${activeItem.badge}-${activeItem.title}`}
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.2 }}
-                className="certification-slider-status-value"
-              >
-                {activeItem.title}
-                <span className="mx-2 text-accent-strong">/</span>
-                {activeItem.issuer}
-              </motion.p>
+              {activeItem ? (
+                <motion.p
+                  key={`${activeItem.id}-${activeItem.title}`}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.2 }}
+                  className="certification-slider-status-value"
+                >
+                  {activeItem.title}
+                  <span className="mx-2 text-accent-strong">/</span>
+                  {activeItem.issuer}
+                </motion.p>
+              ) : null}
             </AnimatePresence>
           </div>
         </div>

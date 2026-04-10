@@ -1,0 +1,78 @@
+{
+  "certifications": [
+    {
+      "id": "cert-001",
+      "name": "Business Analytics Graduate Program",
+      "issuer": "EGADE Business School",
+      "date": "2024 - 2028 (In Progress)",
+      "category": "Data Science",
+      "skills": [
+        "Business Intelligence",
+        "Statistical Modeling",
+        "Decision Making"
+      ],
+      "impact": "Enfoque en la toma de decisiones basada en datos para alta dirección.",
+      "firebase_image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fegade-logo.webp?alt=media",
+      "credential_url": "https://egade.tec.mx/"
+    },
+    {
+      "id": "cert-002",
+      "name": "Azure Solutions Architect Expert",
+      "issuer": "Microsoft",
+      "date": "2023",
+      "category": "Cloud & Infrastructure",
+      "skills": [
+        "Azure Architecture",
+        "Cloud Security",
+        "Infrastructure as Code"
+      ],
+      "impact": "Diseño de infraestructuras escalables para aplicaciones empresariales.",
+      "firebase_image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fazure-architect.webp?alt=media",
+      "credential_url": "https://learn.microsoft.com/en-us/credentials/certifications/solutions-architect/"
+    },
+    {
+      "id": "cert-003",
+      "name": "React 19 & Next.js Advanced Patterns",
+      "issuer": "Vercel / Professional Training",
+      "date": "2024",
+      "category": "Full-Stack Development",
+      "skills": ["Server Components", "Streaming SSR", "Action Hooks"],
+      "impact": "Optimización de performance y SEO para aplicaciones web de alto impacto.",
+      "firebase_image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fnextjs-expert.webp?alt=media",
+      "credential_url": "#"
+    },
+    {
+      "id": "cert-004",
+      "name": "Data Science Professional Certificate",
+      "issuer": "IBM / Coursera",
+      "date": "2023",
+      "category": "Data Science",
+      "skills": ["Python", "Machine Learning", "Data Visualization"],
+      "impact": "Análisis estadístico avanzado aplicado a problemas industriales.",
+      "firebase_image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fibm-data-science.webp?alt=media",
+      "credential_url": "https://www.coursera.org/professional-certificates/ibm-data-science"
+    },
+    {
+      "id": "cert-005",
+      "name": "Mechatronics Engineering License",
+      "issuer": "Universidad Anáhuac",
+      "date": "2017",
+      "category": "Engineering",
+      "skills": ["Industrial Automation", "Control Systems", "IoT"],
+      "impact": "Base de ingeniería para la resolución de problemas complejos.",
+      "firebase_image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fanahuac-logo.webp?alt=media",
+      "credential_url": "#"
+    },
+    {
+      "id": "cert-006",
+      "name": "Certified SOLIDWORKS Associate (CSWA)",
+      "issuer": "Dassault Systèmes",
+      "date": "2017",
+      "category": "Engineering",
+      "skills": ["3D Modeling", "Product Design", "Structural Analysis"],
+      "impact": "Fundamentos de diseño paramétrico y optimización de sistemas mecánicos industriales.",
+      "firebase_image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fsolidworks-logo.webp?alt=media",
+      "credential_url": "#"
+    }
+  ]
+}
