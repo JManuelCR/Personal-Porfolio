@@ -32,3 +32,19 @@
   - [cite_start]**Unit Testing:** Cobertura en funciones de transformación de datos (Python/JS)[cite: 7, 15].
   - **Component Testing:** Verificar que el hover de imagen-a-video se active correctamente.
   - **Visual Regression:** Asegurar que el diseño "Pixel Perfect" no se rompa en actualizaciones.
+
+  ## UI State & Internationalization (i18n)
+- **Theme Management:**
+  - Implementar `next-themes` para un cambio de tema fluido.
+  - [cite_start]**Dark Mode (Default):** Basado en la estética "Cyber-Analytic"[cite: 24].
+  - [cite_start]**Light Mode:** Debe mantener el rigor visual (Pixel Perfect) con contrastes limpios para lectura de datos[cite: 17].
+- **Localization (i18n):**
+  - **Librería:** `next-intl` o `react-i18next`.
+  - [cite_start]**Idiomas:** Inglés (Advanced) y Español (Native) como base.
+  - **Estrategia:** Delegar los textos a archivos JSON de traducción (`en.json`, `es.json`) para mantener los componentes "puros".
+  
+  ## Advanced Visual Effects (Parallax)
+- **Library:** Framer Motion (useScroll, useTransform) o Lenis para Smooth Scroll.
+- **Implementation:** - **Layered Parallax:** Desplazamiento de elementos decorativos (nodos de grafos, líneas de código, grids de datos) a diferentes velocidades.
+  - **Scroll-Linked Animations:** Revelado de secciones de texto y gráficos de "Business Analytics" conforme el usuario hace scroll.
+  - **Performance:** Forzar el uso de GPU (translate3d) y evitar el cambio de propiedades que disparen el "layout reflow".

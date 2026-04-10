@@ -9,3 +9,8 @@
 - [cite_start]Cerrar la brecha entre el desarrollo Full-Stack empresarial y el análisis predictivo[cite: 9].
 - [cite_start]Especialista en optimizar el "Time-to-Market" mediante IA (Cursor, Gemini)[cite: 8, 24].
 - [cite_start]Idiomas: Español (Nativo), Inglés (Avanzado), Alemán (Principiante)[cite: 60, 61, 62].
+
+# Narrative Flow for Parallax
+1. [cite_start]**Background (Industrial):** Elementos visuales sutiles de la industria automotriz y telecomunicaciones[cite: 20].
+2. [cite_start]**Transition (Development):** Tu etapa de 7 años como Full-Stack Developer[cite: 8, 47].
+3. [cite_start]**Current Focus (Data):** Transformación total a visualización de datos, dashboards dinámicos y maestría en el EGADE.

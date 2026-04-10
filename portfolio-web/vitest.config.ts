@@ -27,10 +27,6 @@ export default defineConfig({
           setupFiles: ["./src/test/setup.ts"],
           include: ["src/**/*.test.ts", "src/**/*.test.tsx"],
           globals: true,
-          coverage: {
-            provider: "v8",
-            reporter: ["text", "html"],
-          },
         },
       },
       {
@@ -48,7 +44,6 @@ export default defineConfig({
             provider: playwright({}),
             instances: [{ browser: 'chromium' }],
           },
-          include: ["src/**/*.stories.tsx", "src/**/*.stories.ts"],
         },
       },
     ],

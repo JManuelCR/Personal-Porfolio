@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 interface ProjectMediaProps {
@@ -21,9 +22,12 @@ export function ProjectMedia({ title, imageUrl, videoUrl }: ProjectMediaProps) {
       aria-label={`${title} preview`}
       tabIndex={0}
     >
-      <img
+      <Image
         src={imageUrl}
         alt={`${title} static preview`}
+        fill
+        unoptimized
+        sizes="(max-width: 768px) 100vw, 33vw"
         className={`project-media-image ${isPlaying ? "is-hidden" : ""}`}
       />
       <video

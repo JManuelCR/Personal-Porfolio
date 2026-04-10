@@ -17,3 +17,8 @@ Your "source of truth" is divided into the following dictionaries located in the
 
 # Workflow
 When I ask you to build a section, start by saying: "Referencing [Dictionary Name]..." to confirm you are using the correct context shard.
+
+# Multi-language & Theme Rules
+- **Rule:** Every text string MUST be wrapped in a translation hook. No hardcoded text in components.
+- **Persistence:** User preferences for language and theme must persist in `localStorage` or via cookies for SSR consistency.
+- **Accessibility:** Ensure that theme toggles and language switchers are accessible (ARIA labels) and follow the Atomic Design "Atom" pattern.
