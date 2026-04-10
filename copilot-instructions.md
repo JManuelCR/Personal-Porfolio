@@ -27,3 +27,7 @@ When I ask you to build a section, start by saying: "Referencing [Dictionary Nam
 - **NO Flat Folders:** No permitas que los archivos `.tsx`, `.test.tsx` o `.stories.tsx` vivan en la raíz de `/atoms`, `/molecules` u `/organisms`.
 - **Atomic Isolation:** Todo componente nuevo debe nacer en su propia carpeta con su respectivo `index.ts`.
 - **Consistency:** Esta regla se aplica también a `hooks/`, `services/` y `utils/`. Cada utilidad compleja debe seguir el patrón de carpeta + index.
+
+# Component Interaction Rules
+- **Rule:** Sliders must be built as Generic Components. Separation between "Data" and "View" is mandatory.
+- **Requirement:** Implement a Custom Hook `useSlider` to manage index state, autoplay, and navigation logic, separate from the UI.

@@ -60,3 +60,10 @@
     - `[ComponentName].module.css` (Si aplica estilos locales)
 - **Barrel Indexing:** Cada nivel de Atomic Design (atoms, molecules, etc.) debe tener un `index.ts` que centralice y re-exporte todos los componentes de sus subcarpetas.
 - **Import Rules:** Prohibido importar directamente desde el archivo `.tsx`. Siempre se debe importar desde el `index` de la carpeta del componente o del nivel atómico.
+
+## Interaction & Motion Patterns
+- **Slider/Carousel:**
+  - **Engine:** Framer Motion `AnimatePresence` y `drag` gestures para soporte táctil.
+  - **Performance:** Uso de `layout` prop para transiciones suaves.
+  - **Responsiveness:** Debe ser adaptativo (1 slide en mobile, 3 en desktop).
+  - **Accessibility:** Navegación por teclado (flechas) y soporte para lectores de pantalla (ARIA roles).

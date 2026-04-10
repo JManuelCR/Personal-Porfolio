@@ -3,6 +3,8 @@
 import Lenis from "lenis";
 import { useEffect, type PropsWithChildren } from "react";
 
+const localeSwitchScrollResetKey = "portfolio:locale-switch-reset-scroll";
+
 export function SmoothScrollProvider({ children }: PropsWithChildren) {
   useEffect(() => {
     const lenis = new Lenis({
@@ -14,6 +16,14 @@ export function SmoothScrollProvider({ children }: PropsWithChildren) {
       autoRaf: false,
       anchors: true,
     });
+
+    if (window.sessionStorage.getItem(localeSwitchScrollResetKey) === "1") {
+      window.sessionStorage.removeItem(localeSwitchScrollResetKey);
+      window.requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+        lenis.scrollTo(0, { immediate: true });
+      });
+    }
 
     let rafId = 0;
 
