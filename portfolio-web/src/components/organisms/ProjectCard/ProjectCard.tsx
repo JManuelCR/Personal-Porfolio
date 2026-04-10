@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { Pill } from "@/components/atoms";
 import { ProjectMedia } from "@/components/molecules";
 import type { CatalogProject } from "@/types/portfolio";
@@ -14,12 +17,21 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const [isActive, setIsActive] = useState(false);
+
   return (
-    <article className="group rounded-2xl border border-line bg-panel p-4 transition-transform duration-300 hover:-translate-y-1 md:p-6">
+    <article
+      className="project-card group rounded-2xl p-4 hover:-translate-y-1 md:p-6"
+      onMouseEnter={() => setIsActive(true)}
+      onMouseLeave={() => setIsActive(false)}
+      onFocus={() => setIsActive(true)}
+      onBlur={() => setIsActive(false)}
+    >
       <ProjectMedia
         title={project.name}
         imageUrl={project.firebaseImageUrl}
         videoUrl={project.firebaseVideoUrl}
+        forceActive={isActive}
       />
       <p className="mt-5 text-xs uppercase tracking-[0.18em] text-accent-strong">
         {prettyCategory(project.category)}

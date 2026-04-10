@@ -16,17 +16,18 @@ const project = {
 };
 
 describe("ProjectCard", () => {
-  it("switches from image to video on hover", () => {
+  it("switches from image to video on card hover", () => {
     render(<ProjectCard project={project} />);
 
     const media = screen.getByLabelText("Analytics Demo preview");
     const image = screen.getByAltText("Analytics Demo static preview");
     const video = media.querySelector("video");
+    const card = media.closest("article");
 
     expect(image.className).not.toContain("is-hidden");
     expect(video?.className).not.toContain("is-visible");
 
-    fireEvent.mouseEnter(media);
+    fireEvent.mouseEnter(card as HTMLElement);
 
     expect(image.className).toContain("is-hidden");
     expect(video?.className).toContain("is-visible");

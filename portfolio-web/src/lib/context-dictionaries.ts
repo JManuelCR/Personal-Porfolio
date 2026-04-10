@@ -30,6 +30,8 @@ export async function getProjectCatalog(): Promise<CatalogProject[]> {
     stack: project.stack,
     impact: sanitizeCitationNoise(project.impact),
     visual: sanitizeCitationNoise(project.visual),
+    firebaseImageUrl: project.firebase_image_url,
+    firebaseVideoUrl: project.firebase_video_url,
   }));
 }
 

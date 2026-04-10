@@ -56,7 +56,7 @@ export function PortfolioHomeTemplate({
       </div>
 
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-6 py-14 md:px-12 md:py-20">
-        <section className="flex items-center justify-end gap-3">
+        <section className="control-strip flex flex-wrap items-center justify-end gap-3 rounded-full px-4 py-3 md:px-5">
           <a href="#trayectoria" className="chip chip-small">
             {content.navExperience}
           </a>
@@ -73,12 +73,12 @@ export function PortfolioHomeTemplate({
           <ThemeToggle darkLabel={content.themeDark} lightLabel={content.themeLight} />
         </section>
 
-        <section className="grid gap-10 rounded-3xl border border-line bg-panel p-8 backdrop-blur-xl md:grid-cols-[1.2fr_0.8fr] md:p-12">
+        <section className="mission-panel mission-panel-strong grid gap-10 rounded-3xl p-8 md:grid-cols-[1.2fr_0.8fr] md:p-12">
           <div className="space-y-6">
             <p className="text-xs uppercase tracking-[0.24em] text-accent-strong">
               {content.badge}
             </p>
-            <h1 className="text-4xl font-semibold tracking-tight text-balance md:text-6xl">
+            <h1 className="hero-title gradient-title text-4xl font-semibold text-balance md:text-6xl">
               {content.headline}
             </h1>
             <p className="max-w-2xl text-base leading-8 text-muted md:text-lg">
@@ -96,7 +96,7 @@ export function PortfolioHomeTemplate({
               <Pill>Firebase Assets</Pill>
             </div>
           </div>
-          <aside className="space-y-4 rounded-2xl border border-line-strong bg-panel-strong p-6">
+          <aside className="surface-card space-y-4 rounded-2xl p-6">
             <p className="text-sm uppercase tracking-[0.18em] text-accent-strong">
               {content.identity}
             </p>
@@ -114,7 +114,7 @@ export function PortfolioHomeTemplate({
             {stackHighlights.map((item) => (
               <article
                 key={item}
-                className="rounded-2xl border border-line bg-panel p-5 text-sm leading-7 text-muted"
+                className="surface-card rounded-2xl p-5 text-sm leading-7 text-muted"
               >
                 {item}
               </article>

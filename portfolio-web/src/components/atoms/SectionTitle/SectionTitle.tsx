@@ -10,7 +10,9 @@ export function SectionTitle({ eyebrow, children }: SectionTitleProps) {
       {eyebrow ? (
         <p className="text-xs uppercase tracking-[0.18em] text-accent-strong">{eyebrow}</p>
       ) : null}
-      <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">{children}</h2>
+      <h2 className="section-title gradient-title text-2xl font-semibold md:text-3xl">
+        {children}
+      </h2>
     </div>
   );
 }

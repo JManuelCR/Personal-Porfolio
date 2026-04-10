@@ -1,0 +1,18 @@
+{
+  "design_system": {
+    "philosophy": "Glassmorphism & High-Contrast Analytics",
+    "color_mapping": {
+      "surface": "var(--background)",
+      "cards": "var(--panel)",
+      "borders": "var(--line)",
+      "highlights": "var(--accent-strong)",
+      "text_primary": "var(--foreground)",
+      "text_secondary": "var(--muted)"
+    },
+    "ui_effects": {
+      "glass": "backdrop-filter: blur(12px); background: rgba(11, 27, 42, 0.7);",
+      "glow": "box-shadow: 0 0 20px rgba(88, 246, 197, 0.15);",
+      "gradient_text": "linear-gradient(90deg, #e4edf7 0%, #58f6c5 100%)"
+    }
+  }
+}

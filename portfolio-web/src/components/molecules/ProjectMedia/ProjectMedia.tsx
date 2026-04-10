@@ -7,10 +7,17 @@ interface ProjectMediaProps {
   title: string;
   imageUrl: string;
   videoUrl: string;
+  forceActive?: boolean;
 }
 
-export function ProjectMedia({ title, imageUrl, videoUrl }: ProjectMediaProps) {
+export function ProjectMedia({
+  title,
+  imageUrl,
+  videoUrl,
+  forceActive = false,
+}: ProjectMediaProps) {
   const [isPlaying, setIsPlaying] = useState(false);
+  const isActive = isPlaying || forceActive;
 
   return (
     <div
@@ -28,16 +35,16 @@ export function ProjectMedia({ title, imageUrl, videoUrl }: ProjectMediaProps) {
         fill
         unoptimized
         sizes="(max-width: 768px) 100vw, 33vw"
-        className={`project-media-image ${isPlaying ? "is-hidden" : ""}`}
+        className={`project-media-image ${isActive ? "is-hidden" : ""}`}
       />
       <video
-        className={`project-media-video ${isPlaying ? "is-visible" : ""}`}
+        className={`project-media-video ${isActive ? "is-visible" : ""}`}
         src={videoUrl}
         muted
         autoPlay
         loop
         playsInline
-        aria-hidden={!isPlaying}
+        aria-hidden={!isActive}
       />
     </div>
   );

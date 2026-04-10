@@ -16,7 +16,7 @@ export function ExperienceParallaxSection({
   content,
 }: ExperienceParallaxSectionProps) {
   return (
-    <section id="trayectoria" className="relative overflow-hidden rounded-3xl border border-line bg-panel p-8 md:p-12">
+    <section id="trayectoria" className="mission-panel relative overflow-hidden rounded-3xl p-8 md:p-12">
       <ParallaxLayer speed={0.45} className="experience-shape shape-grid" />
       <ParallaxLayer speed={0.9} className="experience-shape shape-ring" />
       <ParallaxLayer speed={1.35} className="experience-shape shape-glow" />

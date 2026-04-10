@@ -24,7 +24,11 @@ export function StoryTransitionSection({ content }: StoryTransitionSectionProps)
   const opacity = useTransform(scrollYProgress, [0, 0.35, 1], [0.2, 1, 0.88]);
 
   return (
-    <section id="historia" ref={ref} className="relative overflow-hidden rounded-3xl border border-line bg-panel-strong p-8 md:p-12">
+    <section
+      id="historia"
+      ref={ref}
+      className="mission-panel mission-panel-strong relative overflow-hidden rounded-3xl p-8 md:p-12"
+    >
       <ParallaxLayer speed={0.6} className="story-shape story-rail" />
       <ParallaxLayer speed={1.25} className="story-shape story-focus" />
 
