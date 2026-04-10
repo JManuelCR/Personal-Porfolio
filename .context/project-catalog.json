@@ -1,0 +1,22 @@
+{
+  "project_logic": {
+    "data_science": {
+      "name": "Insurance EDA & Predictive Exploration",
+      "stack": ["Python", "Pandas", "Scikit-learn"],
+      "impact": "Estadística avanzada y validación de hipótesis de negocio [cite: 41, 45]",
+      "visual": "Interactive Plotly Dashboards [cite: 42]"
+    },
+    "full_stack": {
+      "name": "xChange GmbH Module",
+      "stack": ["React 19", "Neo4j", ".NET", "Azure"],
+      "impact": "Sistemas en tiempo real con WebSockets [cite: 48, 50]",
+      "visual": "Dynamic Gauge Graphs [cite: 50]"
+    },
+    "management": {
+      "name": "Language Learning Platform",
+      "stack": ["Node.js", "TypeScript", "React 18"],
+      "impact": "Arquitectura Multi-tenant y CI/CD [cite: 34, 37]",
+      "visual": "Video demo de flujo de usuario"
+    }
+  }
+}
