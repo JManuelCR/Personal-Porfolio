@@ -68,6 +68,47 @@ body {
   padding: 0.3rem 0.65rem;
 }
 
+.project-media {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.9rem;
+  border: 1px solid color-mix(in srgb, var(--line) 85%, transparent);
+  aspect-ratio: 16 / 9;
+  background: color-mix(in srgb, var(--panel-strong) 90%, transparent);
+}
+
+.project-media:focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 2px;
+}
+
+.project-media-image,
+.project-media-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 260ms ease, transform 260ms ease;
+}
+
+.project-media-image {
+  opacity: 1;
+}
+
+.project-media-video {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.project-media-image.is-hidden {
+  opacity: 0;
+  transform: scale(1.04);
+}
+
+.project-media-video.is-visible {
+  opacity: 1;
+}
+
 @keyframes drift {
   from {
     transform: translateY(-12px) scale(1);

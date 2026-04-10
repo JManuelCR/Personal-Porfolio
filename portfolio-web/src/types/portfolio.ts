@@ -5,16 +5,19 @@ export interface CatalogProject {
   stack: string[];
   impact: string;
   visual: string;
+  firebaseImageUrl: string;
+  firebaseVideoUrl: string;
+}
+
+export interface CatalogRawProject {
+  name: string;
+  stack: string[];
+  impact: string;
+  visual: string;
+  firebase_image_url: string;
+  firebase_video_url: string;
 }
 
 export interface CatalogSource {
-  project_logic: Record<
-    string,
-    {
-      name: string;
-      stack: string[];
-      impact: string;
-      visual: string;
-    }
-  >;
+  project_logic: Record<string, CatalogRawProject>;
 }
