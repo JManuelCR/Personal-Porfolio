@@ -2,8 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ParallaxLayer } from "@/components/atoms/ParallaxLayer";
-import { SectionTitle } from "@/components/atoms/SectionTitle";
+import { ParallaxLayer, SectionTitle } from "@/components/atoms";
 
 interface StoryTransitionSectionProps {
   content: {

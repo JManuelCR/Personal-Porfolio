@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { ParallaxLayer } from "@/components/atoms/ParallaxLayer";
+import { ParallaxLayer } from "./ParallaxLayer";
 
 const meta = {
   title: "Atoms/ParallaxLayer",

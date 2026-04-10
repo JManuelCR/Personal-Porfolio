@@ -1,5 +1,4 @@
-import { ParallaxLayer } from "@/components/atoms/ParallaxLayer";
-import { SectionTitle } from "@/components/atoms/SectionTitle";
+import { ParallaxLayer, SectionTitle } from "@/components/atoms";
 
 interface ExperienceParallaxSectionProps {
   content: {

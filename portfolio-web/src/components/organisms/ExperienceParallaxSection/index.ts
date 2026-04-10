@@ -1,0 +1,1 @@
+export { ExperienceParallaxSection } from "./ExperienceParallaxSection";

@@ -1,10 +1,5 @@
-import { LanguageSwitcher } from "@/components/atoms/LanguageSwitcher";
-import { Pill } from "@/components/atoms/Pill";
-import { SectionTitle } from "@/components/atoms/SectionTitle";
-import { ExperienceParallaxSection } from "@/components/organisms/ExperienceParallaxSection";
-import { ThemeToggle } from "@/components/atoms/ThemeToggle";
-import { ProjectCard } from "@/components/organisms/ProjectCard";
-import { StoryTransitionSection } from "@/components/organisms/StoryTransitionSection";
+import { LanguageSwitcher, Pill, SectionTitle, ThemeToggle } from "@/components/atoms";
+import { ExperienceParallaxSection, ProjectCard, StoryTransitionSection } from "@/components/organisms";
 import type { CatalogProject } from "@/types/portfolio";
 
 interface PortfolioHomeTemplateProps {

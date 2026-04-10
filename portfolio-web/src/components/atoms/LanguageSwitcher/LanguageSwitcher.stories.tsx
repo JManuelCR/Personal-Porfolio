@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { NextIntlClientProvider } from "next-intl";
-import { LanguageSwitcher } from "@/components/atoms/LanguageSwitcher";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const meta = {
   title: "Atoms/LanguageSwitcher",

@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { ProjectCard } from "@/components/organisms/ProjectCard";
+import { ProjectCard } from "./ProjectCard";
 
 const project = {
   id: "analytics-demo",

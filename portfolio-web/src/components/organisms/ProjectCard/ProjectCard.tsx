@@ -1,5 +1,5 @@
-import { Pill } from "@/components/atoms/Pill";
-import { ProjectMedia } from "@/components/molecules/ProjectMedia";
+import { Pill } from "@/components/atoms";
+import { ProjectMedia } from "@/components/molecules";
 import type { CatalogProject } from "@/types/portfolio";
 
 const prettyCategory = (value: string): string => {

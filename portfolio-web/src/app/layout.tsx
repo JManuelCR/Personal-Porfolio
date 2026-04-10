@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
-import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
-import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { SmoothScrollProvider, ThemeProvider } from "@/components/providers";
 import "./globals.css";
 
 const displayFont = Space_Grotesk({

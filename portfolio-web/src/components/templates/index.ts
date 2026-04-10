@@ -1,0 +1,1 @@
+export { PortfolioHomeTemplate } from "./PortfolioHomeTemplate";

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { ProjectMedia } from "@/components/molecules/ProjectMedia";
+import { ProjectMedia } from "./ProjectMedia";
 
 const meta = {
   title: "Molecules/ProjectMedia",

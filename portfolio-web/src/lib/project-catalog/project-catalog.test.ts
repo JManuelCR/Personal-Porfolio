@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { mapCatalogSourceToProjects, sanitizeCitationNoise } from "@/lib/project-catalog";
+import { mapCatalogSourceToProjects, sanitizeCitationNoise } from "./project-catalog";
 
 describe("project catalog transformation", () => {
   it("maps raw source and preserves Firebase URLs", () => {

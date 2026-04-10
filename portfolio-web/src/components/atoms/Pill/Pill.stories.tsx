@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { Pill } from "@/components/atoms/Pill";
+import { Pill } from "./Pill";
 
 const meta = {
   title: "Atoms/Pill",

@@ -4,7 +4,7 @@ import {
   getProjectCatalog,
   getTechnicalSnapshot,
 } from "@/lib/context-dictionaries";
-import { PortfolioHomeTemplate } from "@/components/templates/PortfolioHomeTemplate";
+import { PortfolioHomeTemplate } from "@/components/templates";
 import type { AppLocale } from "@/i18n/routing";
 
 interface LocaleHomePageProps {

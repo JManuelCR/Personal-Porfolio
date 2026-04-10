@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { ThemeProvider } from "next-themes";
-import { ThemeToggle } from "@/components/atoms/ThemeToggle";
+import { ThemeToggle } from "./ThemeToggle";
 
 const meta = {
   title: "Atoms/ThemeToggle",

@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { ParallaxLayer } from "@/components/atoms/ParallaxLayer";
+import { ParallaxLayer } from "./ParallaxLayer";
 
 vi.mock("framer-motion", async () => {
   const React = await import("react");
