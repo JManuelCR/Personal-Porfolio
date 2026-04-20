@@ -134,11 +134,20 @@ export async function PortfolioHomeTemplate({
               <span className="mx-2 text-accent-strong">|</span>
               {profileTitle}
             </p>
-            <div className="flex flex-wrap gap-3 text-xs uppercase tracking-widest text-muted">
-              <Pill>React 19</Pill>
-              <Pill>Next.js</Pill>
-              <Pill>Tailwind</Pill>
-              <Pill>Firebase Assets</Pill>
+            <div className="flex flex-wrap gap-3 text-xs uppercase tracking-widest text-muted text-shadow-amber-50">
+              <Pill variant='tag'>Angular</Pill>
+              <Pill variant='tag'>Figma Design</Pill>
+              <Pill variant='tag'>Python</Pill>
+              <Pill variant='tag'>SQL</Pill>
+              <Pill variant='tag'>React 19</Pill>
+              <Pill variant='tag'>Next.js</Pill>
+              <Pill variant='tag'>Tailwind</Pill>
+              <Pill variant='tag'>CI/CD</Pill>
+              <Pill variant='tag'>Copilot</Pill>
+              <Pill variant='tag'>Cursor</Pill>
+              <Pill variant='tag'>MONGO DB</Pill>
+              <Pill variant='tag'>Postgres</Pill>
+              <Pill variant='tag'>Postgres</Pill>
             </div>
           </div>
           <aside className="surface-card space-y-4 rounded-2xl p-6">

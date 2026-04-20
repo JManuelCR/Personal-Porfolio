@@ -25,7 +25,7 @@ export function ThemeToggle({ darkLabel = "Dark", lightLabel = "Light" }: ThemeT
       <motion.span
         className="theme-toggle-thumb"
         initial={false}
-        animate={{ x: isDark ? 35 : 2 }}
+        animate={{ x: isDark ? 33 : 2 }}
         transition={{ type: "spring", stiffness: 420, damping: 24 }}
       />
       <span className="theme-toggle-label font-extrabold">{isDark ? darkLabel : lightLabel}</span>
