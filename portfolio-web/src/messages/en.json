@@ -66,5 +66,45 @@
     "subtitle": "The professional evolution bridges Full-Stack engineering with predictive analytics to reduce uncertainty and accelerate business decisions.",
     "focusLabel": "Current focus",
     "focusValue": "Business Analytics (EGADE) + Data-Driven Product Engineering"
+  },
+  "profileStory": {
+    "phases": {
+      "phase1": {
+        "stage": "Industrial Core",
+        "title": "Hardware & Low-Level Control",
+        "description": "Design of low-cost PLC systems and power circuits in assembler using MPLab."
+      },
+      "phase2": {
+        "stage": "Connectivity",
+        "title": "CAN-BUS Protocol Intelligence",
+        "description": "CAN-BUS network monitoring for critical fault detection in automotive systems."
+      },
+      "phase3": {
+        "stage": "Simulation",
+        "title": "Structural Logic & Wind Tunnel",
+        "description": "Stress and airflow simulation in SolidWorks to optimize Sky antenna structures."
+      },
+      "phase4": {
+        "stage": "Analytics",
+        "title": "Business Intelligence & Strategy",
+        "description": "Turning industrial data into investment strategy and predictive dashboard decisions."
+      }
+    }
+  },
+  "identitySnapshot": {
+    "identity": {
+      "main": {
+        "title": "Primary Identity",
+        "value": "Senior Full-Stack Developer transitioning into Data Science and Business Analytics."
+      },
+      "education": {
+        "title": "Education",
+        "value": "Mechatronics Engineer (Anahuac) and current Business Analytics Master's student at EGADE (graduating in 2028)."
+      },
+      "trajectory": {
+        "title": "Trajectory",
+        "value": "7 years of technical experience evolving from automotive and telecommunications into data-driven applications."
+      }
+    }
   }
 }

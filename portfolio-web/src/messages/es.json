@@ -66,5 +66,45 @@
     "subtitle": "La evolucion profesional conecta la ingenieria Full-Stack con analitica predictiva para reducir incertidumbre y acelerar decisiones de negocio.",
     "focusLabel": "Enfoque actual",
     "focusValue": "Business Analytics (EGADE) + Data-Driven Product Engineering"
+  },
+  "profileStory": {
+    "phases": {
+      "phase1": {
+        "stage": "Industrial Core",
+        "title": "Hardware & Low-Level Control",
+        "description": "Diseno de PLC de bajo costo y circuitos de potencia en ensamblador con MPLab."
+      },
+      "phase2": {
+        "stage": "Connectivity",
+        "title": "CAN-BUS Protocol Intelligence",
+        "description": "Monitoreo de red CAN-BUS para deteccion de fallas criticas en sistemas automotrices."
+      },
+      "phase3": {
+        "stage": "Simulation",
+        "title": "Structural Logic & Wind Tunnel",
+        "description": "Simulacion de esfuerzos y flujo de aire en SolidWorks para optimizacion de antenas Sky."
+      },
+      "phase4": {
+        "stage": "Analytics",
+        "title": "Business Intelligence & Strategy",
+        "description": "Transformacion de datos industriales en estrategias de inversion y dashboards predictivos."
+      }
+    }
+  },
+  "identitySnapshot": {
+    "identity": {
+      "main": {
+        "title": "Identidad Principal",
+        "value": "Senior Full-Stack Developer transicionando a Data Science y Business Analytics."
+      },
+      "education": {
+        "title": "Educacion",
+        "value": "Ingeniero Mecatronico (Anahuac) y actual estudiante de Maestria en Business Analytics en EGADE (graduacion 2028)."
+      },
+      "trajectory": {
+        "title": "Trayectoria",
+        "value": "7 anos de experiencia tecnica evolucionando desde la industria automotriz y telecomunicaciones hacia aplicaciones impulsadas por datos."
+      }
+    }
   }
 }

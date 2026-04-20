@@ -6,7 +6,6 @@ export const sanitizeCitationNoise = (content: string): string => {
   return content
     .replace(/\[cite_start\]/g, "")
     .replace(/\[cite:\s*[^\]]+\]/g, "")
-    .replace(/\s{2,}/g, " ")
     .trim();
 };
 

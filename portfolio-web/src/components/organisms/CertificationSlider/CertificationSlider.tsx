@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { SectionTitle, SliderArrow, SliderDot } from "@/components/atoms";
 import { CertificationCard } from "@/components/molecules";
+import dynamic from 'next/dynamic';
 
 export interface CertificationSlideItem {
   id: string;
