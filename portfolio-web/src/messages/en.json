@@ -103,7 +103,25 @@
       },
       "trajectory": {
         "title": "Trajectory",
-        "value": "7 years of technical experience evolving from automotive and telecommunications into data-driven applications."
+        "value": "9 years of technical experience evolving from automotive and software development into data-driven applications."
+      },
+      "contact": {
+        "title": "Contact",
+        "value": "",
+        "links": [
+           {
+          "title": "LinkedIn",
+          "value": "https://www.linkedin.com/in/josé-manuel-cabrera-rojas"
+        },
+        {
+          "title": "GitHub",
+          "value": "https://github.com/JManuelCR"
+        },
+        {
+          "title": "Email",
+          "value": "josemanuelcabrera2011@gmail.com"
+        }
+        ]
       }
     }
   }

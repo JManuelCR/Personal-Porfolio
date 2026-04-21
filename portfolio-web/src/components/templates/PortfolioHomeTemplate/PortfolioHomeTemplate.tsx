@@ -81,7 +81,7 @@ export async function PortfolioHomeTemplate({
   profileTitle,
   content,
 }: PortfolioHomeTemplateProps) {
-  const avatarUrl = await getPublicUrl(IDENTITY.personal.avatarPath)
+  const avatarUrl = await getPublicUrl(IDENTITY.personal.avatarPath);
   return (
     <div className="relative isolate min-h-screen bg-background text-foreground">
       <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-70">

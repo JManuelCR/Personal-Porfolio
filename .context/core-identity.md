@@ -5,6 +5,7 @@
 - [cite_start]**identity.main.title:** identity.main.value[cite: 6, 9].
 - [cite_start]**identity.education.title:** identity.education.value[cite: 54].
 - [cite_start]**identity.trajectory.title:** identity.trajectory.value[cite: 1, 8].
+- [cite_start]**identity.contact.title:** identity.contact.value 
 
 ## Propuesta de Valor (Target)
 - [cite_start]Cerrar la brecha entre el desarrollo Full-Stack empresarial y el análisis predictivo[cite: 9].

@@ -9,6 +9,6 @@ export const IDENTITY = {
       { name: "Inglés", level: "Avanzado" },
       { name: "Alemán", level: "Principiante" },
     ],
-    avatarPath: "me.png"
+    avatarPath: "me.jpg"
   },
 };

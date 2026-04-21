@@ -5,8 +5,8 @@ export interface CatalogProject {
   stack: string[];
   impact: string;
   visual: string;
-  firebaseImageUrl: string;
-  firebaseVideoUrl: string;
+  imageUrl: string;
+  videoUrl: string;
 }
 
 export interface CatalogRawProject {
@@ -14,8 +14,8 @@ export interface CatalogRawProject {
   stack: string[];
   impact: string;
   visual: string;
-  firebase_image_url: string;
-  firebase_video_url: string;
+  image_url: string;
+  video_url: string;
 }
 
 export interface CatalogSource {

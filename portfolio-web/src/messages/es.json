@@ -103,7 +103,25 @@
       },
       "trajectory": {
         "title": "Trayectoria",
-        "value": "7 anos de experiencia tecnica evolucionando desde la industria automotriz y telecomunicaciones hacia aplicaciones impulsadas por datos."
+        "value": "9 años de experiencia tecnica evolucionando desde la industria automotriz y desarrollo de software hacia aplicaciones impulsadas por datos."
+      },
+      "contact": {
+        "title": "Contact",
+        "value": "",
+        "links":[
+           {
+          "title": "LinkedIn",
+          "value": "https://www.linkedin.com/in/josé-manuel-cabrera-rojas"
+        },
+        {
+          "title": "GitHub",
+          "value": "https://github.com/JManuelCR"
+        },
+        {
+          "title": "Email",
+          "value": "josemanuelcabrera2011@gmail.com"
+        }
+        ]
       }
     }
   }

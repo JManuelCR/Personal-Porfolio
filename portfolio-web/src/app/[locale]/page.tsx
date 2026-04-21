@@ -12,6 +12,7 @@ import {
 } from "@/components/templates";
 import type { CertificationSlideItem } from "@/components/organisms/CertificationSlider";
 import type { AppLocale } from "@/i18n/routing";
+import { link } from "fs";
 
 interface LocaleHomePageProps {
   params: Promise<{ locale: AppLocale }>;
@@ -21,7 +22,7 @@ const normalizeI18nKey = (value: string): string => {
   return value.trim().replace(/[.,;:!?]+$/g, "");
 };
 
-const resolveIdentityTranslation = (
+export const resolveIdentityTranslation = (
   rawValue: string,
   translate: (key: string) => string,
 ): string => {
@@ -122,18 +123,34 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
     }),
   );
 
+
   const identityHighlights = (identitySnapshot.match(/^\s*-\s+.+$/gm) ?? [])
-    .slice(0, 3)
+    .slice(0, 4)
     .map((line: string) => line.replace(/^\s*-\s*/, "")
     .trim())
     .map((line: string) => parseIdentityBullet(line))
     .map((item) => {
       const title = resolveIdentityTranslation(item.title, tIdentitySnapshot);
       const value = resolveIdentityTranslation(item.value, tIdentitySnapshot);
-
+      let links = undefined;
+      
+try {
+        // Buscamos la llave del array de links en tus archivos .json
+        const rawLinks = tIdentitySnapshot.raw('identity.contact.links');
+        if (item.title.toLocaleLowerCase().includes('contact')) {
+          links = rawLinks.map((link: {title:string, value: string}) => ({
+            title: link.title, // Ya viene del .json traducido
+            value: link.value  // La URL
+          }));
+        }
+      } catch (e) {
+        console.error("Error cargando links desde el json de traducción", e);
+      }
+      console.log(links)
       return {
         title,
-        value,
+        value, 
+        links
       };
     });
 

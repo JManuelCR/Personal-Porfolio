@@ -138,7 +138,16 @@ body::before {
     inset 0 1px 0 color-mix(in srgb, var(--foreground) 5%, transparent),
     0 12px 32px color-mix(in srgb, #000000 16%, transparent);
 }
-
+.surface-card .image-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+.surface-card .image-container .card-image{
+  border-radius: 8px;
+  box-shadow: 0px 0px 4px var(--accent-strong);
+}
 .orb {
   position: absolute;
   width: 26rem;
@@ -284,7 +293,7 @@ body::before {
 
 .theme-toggle-thumb {
   position: absolute;
-  top: 1.5px;
+  top: 0.5px;
   left: 0;
   width: 30px;
   height: 30px;
@@ -546,10 +555,10 @@ body::before {
 
 .profile-narrative-stage {
   color: var(--accent-strong);
-  font-size: 0.82rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-weight: 700;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
 }
 
 .profile-narrative-title {

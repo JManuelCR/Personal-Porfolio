@@ -1,28 +1,44 @@
 {
   "project_logic": {
     "data_science": {
-      "name": "Insurance EDA & Predictive Exploration",
-      "stack": ["Python", "Pandas", "Scikit-learn"],
+      "name": "Card Brand Sales dashboard",
+      "stack": ["Python", "Pandas", "Streamlit"],
       "impact": "Estadística avanzada y validación de hipótesis de negocio [cite: 41, 45]",
       "visual": "Interactive Plotly Dashboards [cite: 42]",
-      "firebase_image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/projects%2Finsurance-eda-cover.webp?alt=media",
-      "firebase_video_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/projects%2Finsurance-eda-preview.mp4?alt=media"
+      "image_url": "car-brands-statistics-project.jpg",
+      "video_url": "car-brand-statistics-video.mp4"
+    },
+        "Sales Data Analysis": {
+      "name": "Video games companies and brands historic sales and highlights",
+      "stack": ["Python, Pandas, PlotLy Scipy, Numpy"],
+      "impact": "",
+      "visual": "Video demo de flujo de usuario",
+      "image_url": "video-games-industry-data-analysis.jpg",
+      "video_url": "video-games-data-analysis-compressed.mp4"
     },
     "full_stack": {
       "name": "xChange GmbH Module",
-      "stack": ["React 19", "Neo4j", ".NET", "Azure"],
+      "stack": ["Angular 19", "Neo4j", ".NET", "Azure", "Python"],
       "impact": "Sistemas en tiempo real con WebSockets [cite: 48, 50]",
       "visual": "Dynamic Gauge Graphs [cite: 50]",
-      "firebase_image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/projects%2Fxchange-module-cover.webp?alt=media",
-      "firebase_video_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/projects%2Fxchange-module-preview.mp4?alt=media"
+      "image_url": "xchange-preview-image.jpg",
+      "video_url": "xchange_video_how_to.mp4"
     },
-    "management": {
-      "name": "Language Learning Platform",
-      "stack": ["Node.js", "TypeScript", "React 18"],
+    "Access & management": {
+      "name": "Access  & management event  control panel",
+      "stack": ["Node.js", "TypeScript", "React 19"],
+      "impact": "Sistemas en tiempo real con WebSockets [cite: 48, 50]",
+      "visual": "Video demo de flujo de usuario",
+      "image_url": "panel-control-invitados.jpg",
+      "video_url": "dashboard-invitations-compressed.mp4"
+    },
+    "Event Invitation": {
+      "name": "Invitation template by user language and profile",
+      "stack": ["Node.js", "TypeScript", "React 19"],
       "impact": "Arquitectura Multi-tenant y CI/CD [cite: 34, 37]",
       "visual": "Video demo de flujo de usuario",
-      "firebase_image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/projects%2Flanguage-platform-cover.webp?alt=media",
-      "firebase_video_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/projects%2Flanguage-platform-preview.mp4?alt=media"
+      "image_url": "invitation-project.jpg",
+      "video_url": "invitation-project-compressed.mp4"
     }
   }
 }
