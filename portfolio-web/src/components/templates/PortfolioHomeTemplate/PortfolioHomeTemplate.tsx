@@ -81,7 +81,19 @@ export async function PortfolioHomeTemplate({
   profileTitle,
   content,
 }: PortfolioHomeTemplateProps) {
-  const avatarUrl = await getPublicUrl(IDENTITY.personal.avatarPath);
+  const avatarUrl = await getPublicUrl(IDENTITY.personal.avatarPath)
+  const projectWithImagesURLs = await Promise.all(
+    projects.map(async (project) => {
+      const image = await getPublicUrl(project.imageUrl);
+      const video = await getPublicUrl(project.videoUrl, 3600, "video");
+      return {
+        ...project,
+        imageUrl: image,
+        videoUrl: video,
+      };
+    }),
+  );
+
   return (
     <div className="relative isolate min-h-screen bg-background text-foreground">
       <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-70">
@@ -135,19 +147,19 @@ export async function PortfolioHomeTemplate({
               {profileTitle}
             </p>
             <div className="flex flex-wrap gap-3 text-xs uppercase tracking-widest text-muted text-shadow-amber-50">
-              <Pill variant='tag'>Angular</Pill>
-              <Pill variant='tag'>Figma Design</Pill>
-              <Pill variant='tag'>Python</Pill>
-              <Pill variant='tag'>SQL</Pill>
-              <Pill variant='tag'>React 19</Pill>
-              <Pill variant='tag'>Next.js</Pill>
-              <Pill variant='tag'>Tailwind</Pill>
-              <Pill variant='tag'>CI/CD</Pill>
-              <Pill variant='tag'>Copilot</Pill>
-              <Pill variant='tag'>Cursor</Pill>
-              <Pill variant='tag'>MONGO DB</Pill>
-              <Pill variant='tag'>Postgres</Pill>
-              <Pill variant='tag'>Postgres</Pill>
+              <Pill variant="tag">Angular</Pill>
+              <Pill variant="tag">Figma Design</Pill>
+              <Pill variant="tag">Python</Pill>
+              <Pill variant="tag">SQL</Pill>
+              <Pill variant="tag">React 19</Pill>
+              <Pill variant="tag">Next.js</Pill>
+              <Pill variant="tag">Tailwind</Pill>
+              <Pill variant="tag">CI/CD</Pill>
+              <Pill variant="tag">Copilot</Pill>
+              <Pill variant="tag">Cursor</Pill>
+              <Pill variant="tag">MONGO DB</Pill>
+              <Pill variant="tag">Postgres</Pill>
+              <Pill variant="tag">Postgres</Pill>
             </div>
           </div>
           <aside className="surface-card space-y-4 rounded-2xl p-6">
@@ -209,7 +221,7 @@ export async function PortfolioHomeTemplate({
             </SectionTitle>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
-            {projects.map((project) => (
+            {projectWithImagesURLs.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
