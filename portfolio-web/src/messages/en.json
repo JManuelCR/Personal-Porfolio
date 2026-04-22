@@ -10,20 +10,57 @@
     "identity": "Identity Snapshot",
     "technical": "Technical North Star",
     "catalog": "Project Catalog",
-    "catalogSource": "Source: .context/project-catalog.json"
+    "catalogSource": "Follow my tech path"
   },
   "controls": {
     "theme": "Theme",
     "language": "Language",
     "dark": "Dark",
     "light": "Light",
+    "navCertifications": "Certifications",
     "navExperience": "Experience",
     "navStory": "Story"
   },
+  "certifications": {
+    "eyebrow": "Validation Track",
+    "title": "Certifications and specialization signals",
+    "subtitle": "Executive education and cloud/data learning tracks positioned as proof of a disciplined transition into Business Analytics, applied Data Science and modern React 19 product delivery.",
+    "previous": "Previous certification",
+    "next": "Next certification",
+    "statusLabel": "Active now",
+    "dotLabel": "Go to certification {index}: {title}",
+    "items": {
+  
+      "certification1":
+      {
+        "badge": "EGADE",
+        "title": "Business Analytics Candidate",
+        "issuer": "EGADE Business School"
+      },
+      "certification2":
+      {
+        "badge": "AZURE",
+        "title": "Cloud Fundamentals Track",
+        "issuer": "Microsoft Learn"
+      },
+      "certification3":
+      {
+        "badge": "DATA",
+        "title": "Azure Data Foundations Track",
+        "issuer": "Microsoft Learn"
+      },
+      "certification4":
+      {
+        "badge": "POWER",
+        "title": "Power BI Reporting Track",
+        "issuer": "Microsoft Learn"
+      }
+    }
+  },
   "experience": {
-    "title": "7-year industry trajectory",
-    "subtitle": "Hands-on delivery across telecommunications and automotive, building technical solutions focused on performance, reliability and operational scale.",
-    "timelineTitle": "2018 -> 2025",
+    "title": "10-year industry trajectory",
+    "subtitle": "Hands-on delivery across automotive, mechanical simulation, telecommunications and developing, building technical solutions focused on performance, reliability and operational scale.",
+    "timelineTitle": "2015 -> 2025",
     "telecomTitle": "Telecommunications",
     "telecomDetail": "Implementation of connected solutions for high-availability operations and critical response-time environments.",
     "automotiveTitle": "Automotive",
@@ -34,5 +71,63 @@
     "subtitle": "The professional evolution bridges Full-Stack engineering with predictive analytics to reduce uncertainty and accelerate business decisions.",
     "focusLabel": "Current focus",
     "focusValue": "Business Analytics (EGADE) + Data-Driven Product Engineering"
+  },
+  "profileStory": {
+    "phases": {
+      "phase1": {
+        "stage": "Industrial Core",
+        "title": "Hardware & Low-Level Control",
+        "description": "Design of low-cost PLC systems and power circuits in assembler using MPLab."
+      },
+      "phase2": {
+        "stage": "Connectivity",
+        "title": "CAN-BUS Protocol Intelligence",
+        "description": "CAN-BUS network monitoring for critical fault detection in automotive systems."
+      },
+      "phase3": {
+        "stage": "Simulation",
+        "title": "Structural Logic & Wind Tunnel",
+        "description": "Stress and airflow simulation in SolidWorks to optimize Sky antenna structures."
+      },
+      "phase4": {
+        "stage": "Analytics",
+        "title": "Business Intelligence & Strategy",
+        "description": "Turning industrial data into investment strategy and predictive dashboard decisions."
+      }
+    }
+  },
+  "identitySnapshot": {
+    "identity": {
+      "main": {
+        "title": "Primary Identity",
+        "value": "Senior Full-Stack Developer transitioning into Data Science and Business Analytics."
+      },
+      "education": {
+        "title": "Education",
+        "value": "Mechatronics Engineer (Anahuac) and current Business Analytics Master's student at EGADE (graduating in 2028)."
+      },
+      "trajectory": {
+        "title": "Trajectory",
+        "value": "9 years of technical experience evolving from automotive and software development into data-driven applications."
+      },
+      "contact": {
+        "title": "Contact",
+        "value": "",
+        "links": [
+           {
+          "title": "LinkedIn",
+          "value": "https://www.linkedin.com/in/josé-manuel-cabrera-rojas"
+        },
+        {
+          "title": "GitHub",
+          "value": "https://github.com/JManuelCR"
+        },
+        {
+          "title": "Email",
+          "value": "josemanuelcabrera2011@gmail.com"
+        }
+        ]
+      }
+    }
   }
 }

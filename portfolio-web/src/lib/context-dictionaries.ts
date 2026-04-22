@@ -1,16 +1,16 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import type { CatalogProject, CatalogSource } from "@/types/portfolio";
+import type {
+  CatalogProject,
+  CatalogSource,
+  CertificationCatalogItem,
+  CertificationCatalogSource,
+  ProfileStoryPhase,
+  ProfileStorySource,
+} from "@/types/portfolio";
+import { mapCatalogSourceToProjects, sanitizeCitationNoise } from "@/lib/project-catalog";
 
 const contextDirectory = path.resolve(process.cwd(), "..", ".context");
-
-const sanitizeCitationNoise = (content: string): string => {
-  return content
-    .replace(/\[cite_start\]/g, "")
-    .replace(/\[cite:\s*[^\]]+\]/g, "")
-    .replace(/\s{2,}/g, " ")
-    .trim();
-};
 
 export async function readDictionary(name: string): Promise<string> {
   const target = path.join(contextDirectory, name);
@@ -23,15 +23,41 @@ export async function getProjectCatalog(): Promise<CatalogProject[]> {
   const raw = await fs.readFile(target, "utf-8");
   const parsed = JSON.parse(raw) as CatalogSource;
 
-  return Object.entries(parsed.project_logic).map(([category, project]) => ({
-    id: `${category}-${project.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
-    category,
-    name: project.name,
-    stack: project.stack,
-    impact: sanitizeCitationNoise(project.impact),
-    visual: sanitizeCitationNoise(project.visual),
-    firebaseImageUrl: project.firebase_image_url,
-    firebaseVideoUrl: project.firebase_video_url,
+  return mapCatalogSourceToProjects(parsed);
+}
+
+export async function getCertificationsCatalog(): Promise<CertificationCatalogItem[]> {
+  const target = path.join(contextDirectory, "certifications-catalog.json");
+  const raw = await fs.readFile(target, "utf-8");
+  const parsed = JSON.parse(raw) as CertificationCatalogSource;
+
+  return parsed.certifications.map((certification) => ({
+    id: certification.id,
+    name: certification.name,
+    issuer: certification.issuer,
+    date: certification.date,
+    category: certification.category,
+    skills: certification.skills,
+    impact: sanitizeCitationNoise(certification.impact),
+    image_url: certification.image_url,
+    credentialUrl: certification.credential_url,
+  }));
+}
+
+export async function getProfileStoryPhases(): Promise<ProfileStoryPhase[]> {
+  const target = path.join(contextDirectory, "profile-story.json");
+  const raw = await fs.readFile(target, "utf-8");
+  const parsed = JSON.parse(raw) as ProfileStorySource;
+
+  return parsed.narrative_parallax.map((phase) => ({
+    id: phase.id,
+    stage: sanitizeCitationNoise(phase.stage),
+    title: sanitizeCitationNoise(phase.title),
+    description: sanitizeCitationNoise(phase.description),
+    imageGallery: phase.image_gallery,
+    backgroundLayer: phase.visual_assets.background_layer,
+    floatingElement: phase.visual_assets.floating_element,
+    parallaxSpeed: phase.parallax_speed,
   }));
 }
 
@@ -40,5 +66,5 @@ export async function getIdentitySnapshot(): Promise<string> {
 }
 
 export async function getTechnicalSnapshot(): Promise<string> {
-  return readDictionary("technical-specs.md");
+  return readDictionary("technical-skills.md");
 }

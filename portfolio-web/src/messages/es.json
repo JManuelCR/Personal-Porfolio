@@ -6,33 +6,123 @@
   "hero": {
     "badge": "De Senior Developer hacia Business Analytics",
     "headline": "Diseñando productos data-driven con impacto estratégico de negocio.",
-    "description": "Portafolio profesional orientado a arquitectura Full-Stack, visualizacion analitica y ejecucion enfocada en time-to-market.",
+    "description": "Portafolio profesional orientado a arquitectura Full-Stack, visualización analítica y ejecución enfocada en time-to-market.",
     "identity": "Resumen de identidad",
     "technical": "Norte técnico",
     "catalog": "Catálogo de proyectos",
-    "catalogSource": "Fuente: .context/project-catalog.json"
+    "catalogSource": "Sigue mi camino en la tecnología"
   },
   "controls": {
     "theme": "Tema",
     "language": "Idioma",
     "dark": "Oscuro",
     "light": "Claro",
+    "navCertifications": "Certificaciones",
     "navExperience": "Trayectoria",
     "navStory": "Historia"
   },
+  "certifications": {
+    "eyebrow": "Ruta de validación",
+    "title": "Certificaciones y señales de especialización",
+    "subtitle": "Formación ejecutiva y rutas cloud/data presentadas como evidencia de una transition solida hacia Business Analytics, Data Science aplicada y plataformas modernas basadas en React 19.",
+    "previous": "Certificación anterior",
+    "next": "Siguiente certificación",
+    "statusLabel": "Activa ahora",
+    "dotLabel": "Ir a la certification {index}: {title}",
+    "items": [
+      {
+        "badge": "EGADE",
+        "title": "Business Analytics Candidate",
+        "issuer": "EGADE Business School"
+      },
+      {
+        "badge": "AZURE",
+        "title": "Cloud Fundamentals Track",
+        "issuer": "Microsoft Learn"
+      },
+      {
+        "badge": "DATA",
+        "title": "Azure Data Foundations Track",
+        "issuer": "Microsoft Learn"
+      },
+      {
+        "badge": "POWER",
+        "title": "Power BI Reporting Track",
+        "issuer": "Microsoft Learn"
+      }
+    ]
+  },
   "experience": {
     "title": "Trayectoria de 7 años en industria",
-    "subtitle": "Experiencia acumulada en telecomunicaciones y automotriz, construyendo soluciones tecnicas con foco en rendimiento, confiabilidad y escalabilidad operativa.",
+    "subtitle": "Experiencia acumulada en telecomunicaciones y automotriz, construyendo soluciones técnicas con foco en rendimiento, confiabilidad y escalabilidad operativa.",
     "timelineTitle": "2018 -> 2025",
     "telecomTitle": "Telecomunicaciones",
-    "telecomDetail": "Implementacion de soluciones conectadas para operaciones de alta disponibilidad y tiempos de respuesta criticos.",
+    "telecomDetail": "Implementation de soluciones conectadas para operaciones de alta disponibilidad y tiempos de respuesta críticos.",
     "automotiveTitle": "Automotriz",
-    "automotiveDetail": "Ingenieria aplicada para procesos industriales, integracion de sistemas y mejora continua orientada a negocio."
+    "automotiveDetail": "Ingeniería aplicada para procesos industriales, integration de sistemas y mejora continua orientada a negocio."
   },
   "story": {
     "title": "Historia y giro hacia Data Science",
-    "subtitle": "La evolucion profesional conecta la ingenieria Full-Stack con analitica predictiva para reducir incertidumbre y acelerar decisiones de negocio.",
+    "subtitle": "La evolución profesional conecta la ingeniería Full-Stack con analítica predictiva para reducir incertidumbre y acelerar decisiones de negocio.",
     "focusLabel": "Enfoque actual",
     "focusValue": "Business Analytics (EGADE) + Data-Driven Product Engineering"
+  },
+  "profileStory": {
+    "phases": {
+      "phase1": {
+        "stage": "Industrial Core",
+        "title": "Hardware & Low-Level Control",
+        "description": "Diseno de PLC de bajo costo y circuitos de potencia en ensamblador con MPLab."
+      },
+      "phase2": {
+        "stage": "Connectivity",
+        "title": "CAN-BUS Protocol Intelligence",
+        "description": "Monitoreo de red CAN-BUS para detección de fallas criticas en sistemas automotrices."
+      },
+      "phase3": {
+        "stage": "Simulation",
+        "title": "Structural Logic & Wind Tunnel",
+        "description": "Simulación de esfuerzos y flujo de aire en SolidWorks para optimización de antenas Sky."
+      },
+      "phase4": {
+        "stage": "Analytics",
+        "title": "Business Intelligence & Strategy",
+        "description": "Transformación de datos industriales en estrategias de inversion y dashboards predictivos."
+      }
+    }
+  },
+  "identitySnapshot": {
+    "identity": {
+      "main": {
+        "title": "Identidad Principal",
+        "value": "Senior Full-Stack Developer transicionando a Data Science y Business Analytics."
+      },
+      "education": {
+        "title": "Educación",
+        "value": "Ingeniero Mecatrónico (Anáhuac) y actual estudiante de Maestría en Business Analytics en EGADE (graduación 2028)."
+      },
+      "trajectory": {
+        "title": "Trayectoria",
+        "value": "9 años de experiencia técnica evolucionando desde la industria automotriz y desarrollo de software hacia aplicaciones impulsadas por datos."
+      },
+      "contact": {
+        "title": "Contact",
+        "value": "",
+        "links":[
+           {
+          "title": "LinkedIn",
+          "value": "https://www.linkedin.com/in/josé-manuel-cabrera-rojas"
+        },
+        {
+          "title": "GitHub",
+          "value": "https://github.com/JManuelCR"
+        },
+        {
+          "title": "Email",
+          "value": "josemanuelcabrera2011@gmail.com"
+        }
+        ]
+      }
+    }
   }
 }

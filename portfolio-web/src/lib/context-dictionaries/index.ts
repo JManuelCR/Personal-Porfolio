@@ -1,5 +1,7 @@
 export {
   readDictionary,
+  getCertificationsCatalog,
+  getProfileStoryPhases,
   getProjectCatalog,
   getIdentitySnapshot,
   getTechnicalSnapshot,

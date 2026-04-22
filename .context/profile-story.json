@@ -1,0 +1,72 @@
+{
+  "narrative_parallax": [
+    {
+      "id": "phase-1",
+      "stage": "phases.phase1.stage",
+      "title": "phases.phase1.title",
+      "description": "phases.phase1.description",
+      "image_gallery": [
+        "plc-bard-image.webp",
+        "plc-pluging.webp",
+        "robot-line.webp",
+        "line-control.webp"
+      ],
+      "visual_assets": {
+        "background_layer": "plc-brain.webp",
+        "floating_element": "plc-rack.webp"
+      },
+      "parallax_speed": 0.2
+    },
+    {
+      "id": "phase-2",
+      "stage": "phases.phase2.stage",
+      "title": "phases.phase2.title",
+      "description": "phases.phase2.description",
+      "image_gallery": [
+        "wiring-automotive.webp",
+        "engine-testing.webp",
+        "engine-scanning.webp",
+        "automotive-wire-harness.webp"
+      ],
+      "visual_assets": {
+        "background_layer": "automotive-background.webp",
+        "floating_element": "engine-floating.webp"
+      },
+      "parallax_speed": 0.5
+    },
+    {
+      "id": "phase-3",
+      "stage": "phases.phase3.stage",
+      "title": "phases.phase3.title",
+      "description": "phases.phase3.description",
+      "image_gallery": [
+        "antenna-setup-tunnel.jpg",
+        "antenna-simulation.webp",
+        "antena-wind-tunnel.png",
+        "load-simulation.webp"
+      ],
+      "visual_assets": {
+        "background_layer": "structural-simulation.webp",
+        "floating_element": "solidworks-simulation.webp"
+      },
+      "parallax_speed": 0.8
+    },
+    {
+      "id": "phase-4",
+      "stage": "phases.phase4.stage",
+      "title": "phases.phase4.title",
+      "description": "phases.phase4.description",
+      "image_gallery": [
+        "egade-business-analytics.jpeg",
+        "knowledge-graph.webp",
+        "global-dashboard.webp",
+        "python-tools.webp"
+      ],
+      "visual_assets": {
+        "background_layer": "dashboard.webp",
+        "floating_element": "equalizer-dashboard.webp"
+      },
+      "parallax_speed": 1.1
+    }
+  ]
+}

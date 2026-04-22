@@ -67,3 +67,7 @@
   - **Performance:** Uso de `layout` prop para transiciones suaves.
   - **Responsiveness:** Debe ser adaptativo (1 slide en mobile, 3 en desktop).
   - **Accessibility:** Navegación por teclado (flechas) y soporte para lectores de pantalla (ARIA roles).
+
+  # Section: My Profile (Narrative)
+- **Constraint:** Do NOT use static cards. The narrative must be continuous.
+- **Implementation:** MUST use sticky containers (`100vh`) with absolute layered assets. Text must transition via opacity based on scroll progress (useTransform).

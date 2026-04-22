@@ -13,16 +13,16 @@ export function SmoothScrollProvider({ children }: PropsWithChildren) {
       gestureOrientation: "vertical",
       wheelMultiplier: 0.95,
       touchMultiplier: 1.1,
-      autoRaf: false,
+      autoRaf: true,
       anchors: true,
     });
 
     if (window.sessionStorage.getItem(localeSwitchScrollResetKey) === "1") {
       window.sessionStorage.removeItem(localeSwitchScrollResetKey);
-      window.requestAnimationFrame(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-        lenis.scrollTo(0, { immediate: true });
-      });
+      lenis.scrollTo(0, { immediate: true });
+      // window.requestAnimationFrame(() => {
+      //   lenis.scrollTo(0, { immediate: true });
+      // });
     }
 
     let rafId = 0;

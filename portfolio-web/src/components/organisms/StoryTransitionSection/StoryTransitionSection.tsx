@@ -32,7 +32,7 @@ export function StoryTransitionSection({ content }: StoryTransitionSectionProps)
       <ParallaxLayer speed={0.6} className="story-shape story-rail" />
       <ParallaxLayer speed={1.25} className="story-shape story-focus" />
 
-      <motion.div className="relative z-10 space-y-8" style={{ scale, opacity }}>
+      <motion.div className="relative z-10 space-y-8" style={{ scale }}>
         <SectionTitle eyebrow={content.focusLabel}>{content.title}</SectionTitle>
         <p className="max-w-3xl text-base leading-8 text-muted md:text-lg">
           {content.subtitle}
