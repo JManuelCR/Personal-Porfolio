@@ -29,8 +29,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
     >
       <ProjectMedia
         title={project.name}
-        imageUrl={project.firebaseImageUrl}
-        videoUrl={project.firebaseVideoUrl}
+        imageUrl={project.imageUrl}
+        videoUrl={project.videUrl}
         forceActive={isActive}
       />
       <p className="mt-5 text-xs uppercase tracking-[0.18em] text-accent-strong">
