@@ -105,32 +105,26 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
     getTranslations({ locale, namespace: "profileStory" }),
     getTranslations({ locale, namespace: "identitySnapshot" }),
   ]);
-  const profileStoryPhases = await Promise.all(
-    profileStoryPhasesRaw.map(async (phase) => {
-      const gallery = await Promise.all(
-        phase.imageGallery.map(async (image) => getPublicUrl(image)),
-      );
-      const backGroundImage = await Promise.resolve(
-        getPublicUrl(phase.backgroundLayer),
-      );
-      const floating = await Promise.resolve(
-        getPublicUrl(phase.floatingElement),
-      );
-      return {
-        ...phase,
-        imageGallery: gallery,
-        backgroundLayer: backGroundImage,
-        floatingElement: floating,
-        stage: tProfileStory(phase.stage),
-        title: tProfileStory(phase.title),
-        description: tProfileStory(phase.description),
-      };
-    }),
-  );
+  const profileStoryPhases = profileStoryPhasesRaw.map((phase) => {
+    const gallery = phase.imageGallery.map((image) => getPublicUrl(image));
+    const backGroundImage = getPublicUrl(phase.backgroundLayer);
+    const floating = getPublicUrl(phase.floatingElement);
+    return {
+      ...phase,
+      imageGallery: gallery,
+      backgroundLayer: backGroundImage,
+      floatingElement: floating,
+      stage: tProfileStory(phase.stage),
+      title: tProfileStory(phase.title),
+      description: tProfileStory(phase.description),
+    };
+  });
 
   const certificationItems: CertificationSlideItem[] = await Promise.all(
-    certificationsCatalog.map(async(item, index) => {
-      const  publicUrl = await getPublicUrl(item.image_url ? item.image_url : "asf")
+    certificationsCatalog.map(async (item, index) => {
+      const publicUrl = await getPublicUrl(
+        item.image_url ? item.image_url : "asf",
+      );
       return {
         id: item.id,
         badge: item.category,
