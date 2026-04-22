@@ -12,9 +12,9 @@ const meta = {
       stack: ["Python", "Pandas", "Scikit-learn"],
       impact: "Estadistica avanzada y validacion de hipotesis de negocio",
       visual: "Interactive Plotly Dashboards",
-      firebaseImageUrl:
+      imageUrl:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/projects%2Finsurance-eda-cover.webp?alt=media",
-      firebaseVideoUrl:
+      videUrl:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/projects%2Finsurance-eda-preview.mp4?alt=media",
     },
   },
