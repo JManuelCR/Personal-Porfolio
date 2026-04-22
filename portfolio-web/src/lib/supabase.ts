@@ -6,17 +6,15 @@ const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 const supabase = createClient(SUPABASE_URL!, SUPABASE_KEY!);
 
-export async function getPublicUrl(
+export  function getPublicUrl(
   path: string,
   expires: number = 3600,
   type: 'image' | 'video' = 'image',
 ) {
-  const portfolio = type === 'image' ? "portfolio-images" : "portfolio-videos";
-  const { data, error } = await supabase.storage
-  .from(portfolio)
-  .createSignedUrl(path, expires);
-  if (error) {
-    return "";
-  }
-  return data.signedUrl;
+  const bucket = type === 'image' ? "portfolio-images" : "portfolio-videos";
+  const { data } =  supabase.storage
+  .from(bucket)
+  .getPublicUrl(path);
+
+  return data.publicUrl;
 }
