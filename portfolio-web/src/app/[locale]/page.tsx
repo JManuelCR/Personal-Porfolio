@@ -168,7 +168,7 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
     });
 
   const stackHighlights = (technicalSnapshot.match(/^\s*-\s+.+$/gm) ?? [])
-    .slice(0, 4)
+    .slice(0, 10)
     .map((line: string) =>
       line
         .replace(/^\s*-\s*/, "")

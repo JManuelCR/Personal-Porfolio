@@ -1,25 +1,25 @@
-# Technical Skills Snapshot
+# Technical Roadmap & Philosophy
 
-## Core Stack
-- React 19 + Next.js App Router for production-grade frontend architecture.
-- TypeScript-first development with reusable Atomic Design components.
-- Tailwind CSS and design-token styling for consistent UI systems.
-- Framer Motion + Lenis for scroll-linked interactions and narrative transitions.
+## Enterprise Frontend & Design Systems
+- Angular Specialist: Arquitecturas de gran escala con RxJS para flujos reactivos y Signals para un rendimiento de vanguardia.
+- Modern React Stack: Desarrollo de aplicaciones de alto rendimiento con React 19 y Next.js (App Router) para optimización de SEO y UX.
+- Design-to-Code Synergy (Figma): Flujo de trabajo integrado con Figma, traduciendo sistemas de diseño complejos en componentes vivos con alta fidelidad.
+- Atomic Design & Styling: Construcción de librerías de UI escalables mediante Tailwind CSS y metodologías de Design Tokens.
 
-## Data and Backend
-- Node.js + FastAPI foundations for service-oriented backend workflows.
-- PostgreSQL modeling for transactional and analytical use cases.
-- Python data tooling with Pandas and NumPy for preprocessing pipelines.
-- API integration strategy focused on observability and predictable contracts.
+## Data & Backend Engineering
+- Service-Oriented Workflows: Desarrollo de servicios eficientes con Node.js y FastAPI, enfocados en la escalabilidad y baja latencia.
+- Relational Data Modeling: Diseño de estructuras en PostgreSQL optimizadas para integridad transaccional y análisis de datos.
+- Data Tooling & Pipelines: Procesamiento y limpieza de datos mediante el stack científico de Python (Pandas, NumPy).
+- API Observability: Estrategia de integración basada en contratos claros, monitoreo y trazabilidad de servicios.
 
-## Cloud and Delivery
-- Azure-oriented mindset for scalable cloud-native deployments.
-- Vercel deployment workflow with performance and DX optimization.
-- Firebase-hosted media assets to keep frontend bundles lightweight.
-- CI-friendly project structure with Storybook and Vitest coverage.
+## Cloud, Delivery & UX
+- Azure-Oriented Mindset: Implementación de soluciones cloud-native y gestión de infraestructura dentro del ecosistema Microsoft Azure.
+- Modern Deployment & Assets: Workflows optimizados en Vercel y gestión de recursos multimedia en Firebase para mantener bundles ligeros.
+- Quality Assurance: Garantía de estabilidad mediante flujos de CI/CD, Vitest para lógica y Storybook para documentación de UI.
+- Immersive Interactions: Refinamiento visual avanzado mediante Framer Motion y Lenis para experiencias interactivas premium.
 
-## Product and Engineering Focus
-- Data-driven product engineering with business impact orientation.
-- Performance, reliability, and maintainability as delivery constraints.
-- Component reusability and clean architecture for long-term evolution.
-- Cross-functional communication between technical execution and business goals.
+## Product Engineering & Leadership
+- Business-Impact Engineering: Capacidad de traducir requerimientos estratégicos en soluciones técnicas que generan valor de negocio.
+- Clean Architecture: Enfoque en la mantenibilidad y el desacoplamiento para permitir la evolución constante del software.
+- Performance & Reliability: El rendimiento y la fiabilidad tratados como pilares críticos, no como características opcionales.
+- Technical Partnership: Facilitador entre el diseño (Figma), la visión de producto y la ejecución técnica de ingeniería.
