@@ -6,12 +6,8 @@ export interface CatalogProject {
   impact: string;
   visual: string;
   imageUrl: string;
-<<<<<<< HEAD
-  videUrl: string
-=======
   videoUrl: string;
   linkToProject: string;
->>>>>>> main
 }
 
 export interface CatalogRawProject {
