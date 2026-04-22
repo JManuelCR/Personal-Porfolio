@@ -11,12 +11,10 @@ export async function getPublicUrl(
   expires: number = 3600,
   type: 'image' | 'video' = 'image',
 ) {
-  const portfolio = type === 'image' ? "portfolio-images" : "portfolio-videos";
-  const { data, error } = await supabase.storage
-  .from(portfolio)
-  .createSignedUrl(path, expires);
-  if (error) {
-    return "";
-  }
-  return data.signedUrl;
+  const bucket = type === 'image' ? "portfolio-images" : "portfolio-videos";
+  const { data } = await supabase.storage
+  .from(bucket)
+  .getPublicUrl(path);
+
+  return data.publicUrl;
 }
