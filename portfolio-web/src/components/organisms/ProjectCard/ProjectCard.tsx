@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Pill } from "@/components/atoms";
 import { ProjectMedia } from "@/components/molecules";
 import type { CatalogProject } from "@/types/portfolio";
@@ -17,10 +17,30 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const elementRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
-
+  useEffect(() => {
+    const isMobile = window.innerWidth <= 768;
+    if (!isMobile) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        setIsActive(entry.isIntersecting);
+      },
+      {
+        threshold: 0.5,
+      },
+    );
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+    return () => {
+      if (elementRef.current) observer.unobserve(elementRef.current);
+    };
+  });
   return (
     <a
+      ref={elementRef}
       href={project.linkToProject}
       target="_blank"
       className="project-card group rounded-2xl p-4 hover:-translate-y-1 md:p-6 relative group"
@@ -28,9 +48,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
       onMouseLeave={() => setIsActive(false)}
       onFocus={() => setIsActive(true)}
       onBlur={() => setIsActive(false)}
-    > 
-    <div className="absolute hidden group-hover:flex w-full h-full top-0 left-0 items-center justify-center rounded-2xl bg-white/50">
-    <span className="absolute bottom-12 font-extrabold text-2xl text-accent-strong">Go to project</span></div>
+    >
+      <div className="absolute hidden group-hover:flex w-full h-full top-0 left-0 items-center justify-center rounded-2xl bg-white/50">
+        <span className="absolute bottom-12 font-extrabold text-2xl text-accent-strong">
+          Go to project
+        </span>
+      </div>
       <ProjectMedia
         title={project.name}
         imageUrl={project.imageUrl}
