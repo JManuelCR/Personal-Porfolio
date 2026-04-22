@@ -1,8 +1,14 @@
-# Hi there, I'm [Your Name]! <img src="https://raw.githubusercontent.com/itspacman/itspacman/main/assets/wave.gif" width="30px">
+# Hi there, I'm Jose manuel Cabrera Rojas! <img src="https://raw.githubusercontent.com/itspacman/itspacman/main/assets/wave.gif" width="30px">
 
 ### Senior Product Engineer | Enterprise Architect & Immersive UX Specialist
 
 I am a product-driven engineer focused on the intersection of technical excellence and business impact. I specialize in building scalable systems—ranging from robust **Angular** enterprise architectures to high-performance **Next.js** applications and fluid **Framer Motion** interactions.
+
+---
+
+## 🌐 Digital Showroom
+> **Check out my full portfolio and interactive experiments:**
+> [**personal-porfolio-22cv.vercel.app**](https://personal-porfolio-22cv.vercel.app/es)
 
 ---
 
