@@ -9,13 +9,10 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "firebasestorage.googleapis.com",
-      },
-      {
-        protocol: "https",
-        hostname: "*",
-      },
+        protocol:'https',
+        hostname: 'vmikdkdnsivhxtkczvtr.supabase.co',
+        pathname: '/storage/v1/object/**'
+      }
     ],
   },
 };

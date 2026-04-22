@@ -32,7 +32,7 @@ export interface CertificationCatalogItem {
   category: string;
   skills: string[];
   impact: string;
-  firebaseImageUrl: string;
+  image_url: string;
   credentialUrl: string;
 }
 
@@ -44,7 +44,7 @@ export interface CertificationCatalogRawItem {
   category: string;
   skills: string[];
   impact: string;
-  firebase_image_url: string;
+  image_url: string;
   credential_url: string;
 }
 

@@ -1,10 +1,8 @@
 "use client";
-
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { SectionTitle, SliderArrow, SliderDot } from "@/components/atoms";
 import { CertificationCard } from "@/components/molecules";
-import dynamic from 'next/dynamic';
 
 export interface CertificationSlideItem {
   id: string;
@@ -78,6 +76,7 @@ export function CertificationSlider({
     };
   }, []);
 
+
   const itemCount = items.length;
   const visibleCount = Math.min(slidesPerView, Math.max(itemCount, 1));
   const activeIndex = itemCount === 0 ? 0 : ((currentIndex % itemCount) + itemCount) % itemCount;
@@ -130,7 +129,7 @@ export function CertificationSlider({
       movePrevious();
     }
   };
-
+  
   return (
     <section
       id="certifications"

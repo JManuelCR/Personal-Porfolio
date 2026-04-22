@@ -12,6 +12,7 @@ export function Header(data: HeaderProps) {
   const { avatarUrl, content } = data;
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  
 
   useEffect(() => {
     const handleCLickOutside = (event: MouseEvent) => {

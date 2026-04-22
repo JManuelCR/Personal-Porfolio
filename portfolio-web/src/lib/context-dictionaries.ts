@@ -39,7 +39,7 @@ export async function getCertificationsCatalog(): Promise<CertificationCatalogIt
     category: certification.category,
     skills: certification.skills,
     impact: sanitizeCitationNoise(certification.impact),
-    firebaseImageUrl: certification.firebase_image_url,
+    image_url: certification.image_url,
     credentialUrl: certification.credential_url,
   }));
 }

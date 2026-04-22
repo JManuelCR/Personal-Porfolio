@@ -108,14 +108,14 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
   const profileStoryPhases = await Promise.all(
     profileStoryPhasesRaw.map(async (phase) => {
       const gallery = await Promise.all(
-        phase.imageGallery.map(async (image) => getPublicUrl(image))
+        phase.imageGallery.map(async (image) => getPublicUrl(image)),
       );
       const backGroundImage = await Promise.resolve(
         getPublicUrl(phase.backgroundLayer),
       );
       const floating = await Promise.resolve(
-        getPublicUrl(phase.floatingElement)
-      )
+        getPublicUrl(phase.floatingElement),
+      );
       return {
         ...phase,
         imageGallery: gallery,
@@ -128,19 +128,23 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
     }),
   );
 
-  const certificationItems: CertificationSlideItem[] =
-    certificationsCatalog.map((item, index) => ({
-      id: item.id,
-      badge: item.category,
-      title: item.name,
-      issuer: item.issuer,
-      imageUrl: item.firebaseImageUrl,
-      skills: item.skills,
-      dotLabel: tCertifications("dotLabel", {
-        index: index + 1,
+  const certificationItems: CertificationSlideItem[] = await Promise.all(
+    certificationsCatalog.map(async(item, index) => {
+      const  publicUrl = await getPublicUrl(item.image_url ? item.image_url : "asf")
+      return {
+        id: item.id,
+        badge: item.category,
         title: item.name,
-      }),
-    }));
+        issuer: item.issuer,
+        imageUrl: publicUrl,
+        skills: item.skills,
+        dotLabel: tCertifications("dotLabel", {
+          index: index + 1,
+          title: item.name,
+        }),
+      };
+    }),
+  );
 
   const identityHighlights = (identitySnapshot.match(/^\s*-\s+.+$/gm) ?? [])
     .slice(0, 4)

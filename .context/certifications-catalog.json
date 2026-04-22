@@ -2,6 +2,109 @@
   "certifications": [
     {
       "id": "cert-001",
+      "name": "Certified SOLIDWORKS Associate (CSWA)",
+      "issuer": "Dassault Systèmes",
+      "date": "2017",
+      "category": "Engineering",
+      "skills": ["3D Modeling", "Product Design", "Structural Analysis"],
+      "impact": "Fundamentos de diseño paramétrico y optimización de sistemas mecánicos industriales.",
+      "image_url": "solidworks-certification.jpg",
+      "credential_url": "#"
+    },
+    {
+      "id": "cert-002",
+      "name": "Mechatronics Engineering License",
+      "issuer": "Universidad Anáhuac",
+      "date": "2017",
+      "category": "Engineering",
+      "skills": ["Industrial Automation", "Control Systems", "IoT"],
+      "impact": "Base de ingeniería para la resolución de problemas complejos.",
+      "image_url": "titulo-mecatronica.jpg",
+      "credential_url": "#"
+    },
+    {
+      "id": "cert-003",
+      "name": "Scrum Fundamentals Certified",
+      "issuer": "VMEdu.Inc",
+      "date": "2023",
+      "category": "Agile",
+      "skills": ["Agile", "Work flow", "Scrum"],
+      "impact": "Implementación de trabajo en un esquema flexible y colaborativo",
+      "image_url": "scrum-certificade.jpg",
+      "credential_url": "https://learn.microsoft.com/en-us/credentials/certifications/solutions-architect/"
+    },
+    {
+      "id": "cert-004",
+      "name": "Desarrollo Web Full-Stack",
+      "issuer": "kodemia",
+      "date": "2023",
+      "category": "Full-Stack Development",
+      "skills": [
+        "Server Components",
+        "Streaming SSR",
+        "Action Hooks",
+        "JavaScript",
+        "Figma",
+        "Node.JS"
+      ],
+      "impact": "Optimización de performance y SEO para aplicaciones web de alto impacto.",
+      "image_url": "kodemia-certification.jpg",
+      "credential_url": "#"
+    },
+    {
+      "id": "cert-005",
+      "name": "Google Cloud essentials",
+      "issuer": "Google",
+      "date": "2023",
+      "category": "Full-Stack Development",
+      "skills": [
+        "Server Components",
+        "Streaming SSR",
+        "Action Hooks",
+        "JavaScript",
+        "Figma",
+        "Node.JS"
+      ],
+      "impact": "Despliegue de arquitecturas escalables en la nube, integrando Rendering de Servidor (SSR) y Streaming para maximizar la velocidad de carga y la eficiencia operativa.",
+      "image_url": "google-cloud-essentials.jpg",
+      "credential_url": "#"
+    },
+    {
+      "id": "cert-006",
+      "name": "Data Science",
+      "issuer": "Triple Ten",
+      "date": "2026",
+      "category": "Data Science",
+      "skills": [
+        "Python",
+        "Machine Learning",
+        "Data Visualization",
+        "Statistics",
+        "Linear Regretion"
+      ],
+      "impact": "Análisis estadístico avanzado aplicado a problemas industriales.",
+      "image_url": "data-scientist-cer.jpg",
+      "credential_url": "https://www.coursera.org/professional-certificates/ibm-data-science"
+    },
+    {
+      "id": "cert-007",
+      "name": "SQL",
+      "issuer": "Triple Ten",
+      "date": "2026",
+      "category": "Data Science",
+      "skills": [
+        "Python",
+        "Machine Learning",
+        "Data Visualization",
+        "Statistics",
+        "Linear Regretion"
+      ],
+      "impact": "Análisis estadístico avanzado aplicado a problemas industriales.",
+      "image_url": "sql-tripleten-cer.jpg",
+      "credential_url": "https://www.coursera.org/professional-certificates/ibm-data-science"
+    },
+    {
+      "id": "cert-008",
       "name": "Business Analytics Graduate Program",
       "issuer": "EGADE Business School",
       "date": "2025 - 2028 (In Progress)",
@@ -12,67 +115,8 @@
         "Decision Making"
       ],
       "impact": "Enfoque en la toma de decisiones basada en datos para alta dirección.",
-      "image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fegade-logo.webp?alt=media",
+      "image_url": "egade-logo.webp",
       "credential_url": "https://egade.tec.mx/"
-    },
-    {
-      "id": "cert-004",
-      "name": "Data Science",
-      "issuer": "Triple Ten",
-      "date": "2026",
-      "category": "Data Science",
-      "skills": ["Python", "Machine Learning", "Data Visualization", "Statistics", "Linear Regretion"],
-      "impact": "Análisis estadístico avanzado aplicado a problemas industriales.",
-      "image_url": "kodemia-certification.jpg",
-      "credential_url": "https://www.coursera.org/professional-certificates/ibm-data-science"
-    },
-    {
-      "id": "cert-003",
-      "name": "Desarrollo Web Full-Stack",
-      "issuer": "kodemia",
-      "date": "2023",
-      "category": "Full-Stack Development",
-      "skills": ["Server Components", "Streaming SSR", "Action Hooks", "JavaScript", "Figma", "Node.JS"],
-      "impact": "Optimización de performance y SEO para aplicaciones web de alto impacto.",
-      "image_url": "kodemia-certification.jpg",
-      "credential_url": "#"
-    },
-        {
-      "id": "cert-002",
-      "name": "Scrum Fundamentals Certified",
-      "issuer": "VMEdu.Inc",
-      "date": "2023",
-      "category": "Agile",
-      "skills": [
-        "Agile",
-        "Work flow",
-        "Scrum"
-      ],
-      "impact": "Implementación de trabajo en un esquema flexible y colaborativo",
-      "image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fazure-architect.webp?alt=media",
-      "credential_url": "https://learn.microsoft.com/en-us/credentials/certifications/solutions-architect/"
-    },
-    {
-      "id": "cert-005",
-      "name": "Mechatronics Engineering License",
-      "issuer": "Universidad Anáhuac",
-      "date": "2017",
-      "category": "Engineering",
-      "skills": ["Industrial Automation", "Control Systems", "IoT"],
-      "impact": "Base de ingeniería para la resolución de problemas complejos.",
-      "image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fanahuac-logo.webp?alt=media",
-      "credential_url": "#"
-    },
-    {
-      "id": "cert-006",
-      "name": "Certified SOLIDWORKS Associate (CSWA)",
-      "issuer": "Dassault Systèmes",
-      "date": "2017",
-      "category": "Engineering",
-      "skills": ["3D Modeling", "Product Design", "Structural Analysis"],
-      "impact": "Fundamentos de diseño paramétrico y optimización de sistemas mecánicos industriales.",
-      "image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fsolidworks-logo.webp?alt=media",
-      "credential_url": "#"
     }
   ]
 }
