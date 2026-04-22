@@ -17,6 +17,7 @@ import type { CatalogProject, ProfileStoryPhase } from "@/types/portfolio";
 import { IDENTITY } from "@/constants/identity";
 import { getPublicUrl } from "@/lib/supabase";
 import Image from "next/image";
+import { Header } from "@/components/organisms/Header/Header";
 interface Link {
   title: string;
   value: string;
@@ -99,7 +100,6 @@ export async function PortfolioHomeTemplate({
       };
     }),
   );
-
   const contactItems = (
     data: IdentityHighlightItem,
   ): string | React.ReactNode => {
@@ -133,33 +133,7 @@ export async function PortfolioHomeTemplate({
         <div className="orb orb-right" />
       </div>
 
-      <header className="pointer-events-none fixed inset-x-0 top-3 z-50">
-        <div className="mx-auto flex w-full max-w-6xl justify-end px-6 md:px-12">
-          <section className="control-strip pointer-events-auto flex w-fit flex-wrap items-center justify-end gap-3 rounded-full px-4 py-3 md:px-5">
-            <MainImage imageUrl={avatarUrl} />
-            <a href="#certifications" className="chip chip-small">
-              {content.navCertifications}
-            </a>
-            <a href="#trayectoria" className="chip chip-small">
-              {content.navExperience}
-            </a>
-            <a href="#historia" className="chip chip-small">
-              {content.navStory}
-            </a>
-            <p className="text-xs uppercase tracking-[0.16em] text-muted">
-              {content.controlsLanguage}
-            </p>
-            <LanguageSwitcher />
-            <p className="text-xs uppercase tracking-[0.16em] text-muted">
-              {content.controlsTheme}
-            </p>
-            <ThemeToggle
-              darkLabel={content.themeDark}
-              lightLabel={content.themeLight}
-            />
-          </section>
-        </div>
-      </header>
+      <Header avatarUrl={avatarUrl} content={content} />
 
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-6 pb-14 pt-30 md:px-12 md:pb-20 md:pt-34">
         <section className="mission-panel mission-panel-strong grid gap-10 rounded-3xl p-8 md:grid-cols-[1.2fr_0.8fr] md:p-12">
