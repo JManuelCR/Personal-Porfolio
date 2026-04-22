@@ -13,7 +13,9 @@ const meta = {
       impact: "Estadistica avanzada y validacion de hipotesis de negocio",
       visual: "Interactive Plotly Dashboards",
       imageUrl:
+      imageUrl:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/projects%2Finsurance-eda-cover.webp?alt=media",
+      videUrl:
       videoUrl:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/projects%2Finsurance-eda-preview.mp4?alt=media",
         linkToProject: "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/projects%2Finsurance-eda-preview.mp4?alt=media"
