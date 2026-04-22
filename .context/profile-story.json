@@ -6,14 +6,14 @@
       "title": "phases.phase1.title",
       "description": "phases.phase1.description",
       "image_gallery": [
-        "https://imgs.search.brave.com/bCk57hq8FfTQ91kRm1kbkyayS371ks1Mg-FUic2QqtM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9lbGVj/dHIlQzMlQjNuaWNh/LWRlLWxhLXZlbmRp/bWlhLTkyMDAyMTMw/LmpwZw",
-        "https://imgs.search.brave.com/XBoKqd6pn13LuWZNWSHpddexZTtu0qvlJqivO2kLXsI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ldGth/Lm14L3dwLWNvbnRl/bnQvd2VicGMtcGFz/c3RocnUucGhwP3Ny/Yz1odHRwczovL2V0/a2EubXgvd3AtY29u/dGVudC91cGxvYWRz/LzIwMjUvMDcvTVBT/LTQwMC5qcGcmbm9j/YWNoZT0x",
-        "https://imgs.search.brave.com/bCk57hq8FfTQ91kRm1kbkyayS371ks1Mg-FUic2QqtM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9lbGVj/dHIlQzMlQjNuaWNh/LWRlLWxhLXZlbmRp/bWlhLTkyMDAyMTMw/LmpwZw",
-        "https://imgs.search.brave.com/bCk57hq8FfTQ91kRm1kbkyayS371ks1Mg-FUic2QqtM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9lbGVj/dHIlQzMlQjNuaWNh/LWRlLWxhLXZlbmRp/bWlhLTkyMDAyMTMw/LmpwZw"
+        "plc-bard-image.webp",
+        "plc-pluging.webp",
+        "robot-line.webp",
+        "line-control.webp"
       ],
       "visual_assets": {
-        "background_layer": "https://imgs.search.brave.com/M0Ha-tOHid8CxpYurvToOtlOlpa7A31IWz8EXGhrLbo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi91bi1j/ZXJlYnJvLWJyaWxs/YW50ZS1icmlsbGEt/ZW4tbWVkaW8tZGUt/Y2lyY3VpdG9zLXF1/ZS1jb21iaW5hbi10/ZWNub2xvZyVDMyVB/RGEtZS1pbnRlbGln/ZW5jaWEtZ2VuZXJh/ZG8tcG9yLWlhLTM4/MDM4NjIxOS5qcGc",
-        "floating_element": "https://imgs.search.brave.com/UB91WUAp34SzaCaZmBdlciBEwxpQvEuS85FZw7pS5pw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMjE0/ODIxODA4Ni9lcy92/ZWN0b3IvaWx1c3Ry/YWNpJUMzJUIzbi1j/b25jZXB0dWFsLWRl/bC12ZWN0b3ItcGxh/bm8taXNvbSVDMyVB/OXRyaWNvLTNkLWRl/LWxvcy1jb21wb25l/bnRlcy1kZWwtY2ly/Y3VpdG8uanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPTc5X3ZE/clJ4NWxRdTVjVzRr/eUlWcDRwVHRMdG5z/bWx5SDJLdHR4aEVW/WnM9"
+        "background_layer": "plc-brain.webp",
+        "floating_element": "plc-rack.webp"
       },
       "parallax_speed": 0.2
     },
@@ -23,14 +23,14 @@
       "title": "phases.phase2.title",
       "description": "phases.phase2.description",
       "image_gallery": [
-        "http://googleusercontent.com/image_collection/image_retrieval/1788480233298359038_0",
-        "http://googleusercontent.com/image_collection/image_retrieval/1788480233298359038_1",
-        "http://googleusercontent.com/image_collection/image_retrieval/1788480233298359038_2",
-        "http://googleusercontent.com/image_collection/image_retrieval/1788480233298359038_3"
+        "wiring-automotive.webp",
+        "engine-testing.webp",
+        "engine-scanning.webp",
+        "automotive-wire-harness.webp"
       ],
       "visual_assets": {
-        "background_layer": "https://firebasestorage.googleapis.com/...",
-        "floating_element": "https://firebasestorage.googleapis.com/..."
+        "background_layer": "automotive-background.webp",
+        "floating_element": "engine-floating.webp"
       },
       "parallax_speed": 0.5
     },
@@ -40,14 +40,14 @@
       "title": "phases.phase3.title",
       "description": "phases.phase3.description",
       "image_gallery": [
-        "http://googleusercontent.com/image_collection/image_retrieval/14200017288201228260_0",
-        "http://googleusercontent.com/image_collection/image_retrieval/14200017288201228260_1",
-        "http://googleusercontent.com/image_collection/image_retrieval/14200017288201228260_2",
-        "http://googleusercontent.com/image_collection/image_retrieval/14200017288201228260_3"
+        "antenna-setup-tunnel.jpg",
+        "antenna-simulation.webp",
+        "antena-wind-tunnel.png",
+        "load-simulation.webp"
       ],
       "visual_assets": {
-        "background_layer": "https://firebasestorage.googleapis.com/...",
-        "floating_element": "https://firebasestorage.googleapis.com/..."
+        "background_layer": "structural-simulation.webp",
+        "floating_element": "solidworks-simulation.webp"
       },
       "parallax_speed": 0.8
     },
@@ -57,14 +57,14 @@
       "title": "phases.phase4.title",
       "description": "phases.phase4.description",
       "image_gallery": [
-        "http://googleusercontent.com/image_collection/image_retrieval/3109336344313899124_0",
-        "http://googleusercontent.com/image_collection/image_retrieval/3109336344313899124_1",
-        "http://googleusercontent.com/image_collection/image_retrieval/3109336344313899124_2",
-        "http://googleusercontent.com/image_collection/image_retrieval/3109336344313899124_3"
+        "egade-business-analytics.jpeg",
+        "knowledge-graph.webp",
+        "global-dashboard.webp",
+        "python-tools.webp"
       ],
       "visual_assets": {
-        "background_layer": "https://firebasestorage.googleapis.com/...",
-        "floating_element": "https://firebasestorage.googleapis.com/..."
+        "background_layer": "dashboard.webp",
+        "floating_element": "equalizer-dashboard.webp"
       },
       "parallax_speed": 1.1
     }

@@ -24,6 +24,7 @@ export const mapCatalogSourceToProjects = (
       visual: sanitizeCitationNoise(project.visual),
       imageUrl: project.image_url,
       videoUrl: project.video_url,
+      linkToProject: project.link
     };
   });
 };

@@ -4,7 +4,7 @@
       "id": "cert-001",
       "name": "Business Analytics Graduate Program",
       "issuer": "EGADE Business School",
-      "date": "2024 - 2028 (In Progress)",
+      "date": "2025 - 2028 (In Progress)",
       "category": "Data Science",
       "skills": [
         "Business Intelligence",
@@ -12,45 +12,45 @@
         "Decision Making"
       ],
       "impact": "Enfoque en la toma de decisiones basada en datos para alta dirección.",
-      "firebase_image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fegade-logo.webp?alt=media",
+      "image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fegade-logo.webp?alt=media",
       "credential_url": "https://egade.tec.mx/"
     },
     {
-      "id": "cert-002",
-      "name": "Azure Solutions Architect Expert",
-      "issuer": "Microsoft",
-      "date": "2023",
-      "category": "Cloud & Infrastructure",
-      "skills": [
-        "Azure Architecture",
-        "Cloud Security",
-        "Infrastructure as Code"
-      ],
-      "impact": "Diseño de infraestructuras escalables para aplicaciones empresariales.",
-      "firebase_image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fazure-architect.webp?alt=media",
-      "credential_url": "https://learn.microsoft.com/en-us/credentials/certifications/solutions-architect/"
+      "id": "cert-004",
+      "name": "Data Science",
+      "issuer": "Triple Ten",
+      "date": "2026",
+      "category": "Data Science",
+      "skills": ["Python", "Machine Learning", "Data Visualization", "Statistics", "Linear Regretion"],
+      "impact": "Análisis estadístico avanzado aplicado a problemas industriales.",
+      "image_url": "kodemia-certification.jpg",
+      "credential_url": "https://www.coursera.org/professional-certificates/ibm-data-science"
     },
     {
       "id": "cert-003",
-      "name": "React 19 & Next.js Advanced Patterns",
-      "issuer": "Vercel / Professional Training",
-      "date": "2024",
+      "name": "Desarrollo Web Full-Stack",
+      "issuer": "kodemia",
+      "date": "2023",
       "category": "Full-Stack Development",
-      "skills": ["Server Components", "Streaming SSR", "Action Hooks"],
+      "skills": ["Server Components", "Streaming SSR", "Action Hooks", "JavaScript", "Figma", "Node.JS"],
       "impact": "Optimización de performance y SEO para aplicaciones web de alto impacto.",
-      "firebase_image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fnextjs-expert.webp?alt=media",
+      "image_url": "kodemia-certification.jpg",
       "credential_url": "#"
     },
-    {
-      "id": "cert-004",
-      "name": "Data Science Professional Certificate",
-      "issuer": "IBM / Coursera",
+        {
+      "id": "cert-002",
+      "name": "Scrum Fundamentals Certified",
+      "issuer": "VMEdu.Inc",
       "date": "2023",
-      "category": "Data Science",
-      "skills": ["Python", "Machine Learning", "Data Visualization"],
-      "impact": "Análisis estadístico avanzado aplicado a problemas industriales.",
-      "firebase_image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fibm-data-science.webp?alt=media",
-      "credential_url": "https://www.coursera.org/professional-certificates/ibm-data-science"
+      "category": "Agile",
+      "skills": [
+        "Agile",
+        "Work flow",
+        "Scrum"
+      ],
+      "impact": "Implementación de trabajo en un esquema flexible y colaborativo",
+      "image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fazure-architect.webp?alt=media",
+      "credential_url": "https://learn.microsoft.com/en-us/credentials/certifications/solutions-architect/"
     },
     {
       "id": "cert-005",
@@ -60,7 +60,7 @@
       "category": "Engineering",
       "skills": ["Industrial Automation", "Control Systems", "IoT"],
       "impact": "Base de ingeniería para la resolución de problemas complejos.",
-      "firebase_image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fanahuac-logo.webp?alt=media",
+      "image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fanahuac-logo.webp?alt=media",
       "credential_url": "#"
     },
     {
@@ -71,7 +71,7 @@
       "category": "Engineering",
       "skills": ["3D Modeling", "Product Design", "Structural Analysis"],
       "impact": "Fundamentos de diseño paramétrico y optimización de sistemas mecánicos industriales.",
-      "firebase_image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fsolidworks-logo.webp?alt=media",
+      "image_url": "https://firebasestorage.googleapis.com/v0/b/portfolio-media-demo.appspot.com/o/certs%2Fsolidworks-logo.webp?alt=media",
       "credential_url": "#"
     }
   ]

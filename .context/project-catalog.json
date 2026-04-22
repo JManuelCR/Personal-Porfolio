@@ -2,27 +2,30 @@
   "project_logic": {
     "data_science": {
       "name": "Card Brand Sales dashboard",
-      "stack": ["Python", "Pandas", "Streamlit"],
+      "stack": ["Python", "Pandas", "Streamlit", "PlotLy"],
       "impact": "Estadística avanzada y validación de hipótesis de negocio [cite: 41, 45]",
       "visual": "Interactive Plotly Dashboards [cite: 42]",
       "image_url": "car-brands-statistics-project.jpg",
-      "video_url": "car-brand-statistics-video.mp4"
+      "video_url": "car-brand-statistics-video.mp4",
+      "link": "https://github.com/JManuelCR/Python_Control_Panel"
     },
         "Sales Data Analysis": {
       "name": "Video games companies and brands historic sales and highlights",
-      "stack": ["Python, Pandas, PlotLy Scipy, Numpy"],
+      "stack": ["Python", "Pandas", "PlotLy", "SciPy", "Numpy"],
       "impact": "",
       "visual": "Video demo de flujo de usuario",
       "image_url": "video-games-industry-data-analysis.jpg",
-      "video_url": "video-games-data-analysis-compressed.mp4"
+      "video_url": "video-games-data-analysis-compressed.mp4",
+      "link": "https://github.com/JManuelCR/video-games-sales-data-analysis"
     },
-    "full_stack": {
+    "Full Stack": {
       "name": "xChange GmbH Module",
       "stack": ["Angular 19", "Neo4j", ".NET", "Azure", "Python"],
       "impact": "Sistemas en tiempo real con WebSockets [cite: 48, 50]",
       "visual": "Dynamic Gauge Graphs [cite: 50]",
       "image_url": "xchange-preview-image.jpg",
-      "video_url": "xchange_video_how_to.mp4"
+      "video_url": "xchange_video_how_to.mp4",
+      "link": "https://beta.xcamp.eco/login"
     },
     "Access & management": {
       "name": "Access  & management event  control panel",
@@ -30,7 +33,8 @@
       "impact": "Sistemas en tiempo real con WebSockets [cite: 48, 50]",
       "visual": "Video demo de flujo de usuario",
       "image_url": "panel-control-invitados.jpg",
-      "video_url": "dashboard-invitations-compressed.mp4"
+      "video_url": "dashboard-invitations-compressed.mp4",
+      "link": "https://github.com/JManuelCR/guest-control-dashboard"
     },
     "Event Invitation": {
       "name": "Invitation template by user language and profile",
@@ -38,7 +42,8 @@
       "impact": "Arquitectura Multi-tenant y CI/CD [cite: 34, 37]",
       "visual": "Video demo de flujo de usuario",
       "image_url": "invitation-project.jpg",
-      "video_url": "invitation-project-compressed.mp4"
+      "video_url": "invitation-project-compressed.mp4",
+      "link": "https://github.com/JManuelCR/Invitation"
     }
   }
 }

@@ -10,7 +10,7 @@
     "identity": "Identity Snapshot",
     "technical": "Technical North Star",
     "catalog": "Project Catalog",
-    "catalogSource": "Source: .context/project-catalog.json"
+    "catalogSource": "Follow my tech path"
   },
   "controls": {
     "theme": "Theme",
@@ -29,33 +29,38 @@
     "next": "Next certification",
     "statusLabel": "Active now",
     "dotLabel": "Go to certification {index}: {title}",
-    "items": [
+    "items": {
+  
+      "certification1":
       {
         "badge": "EGADE",
         "title": "Business Analytics Candidate",
         "issuer": "EGADE Business School"
       },
+      "certification2":
       {
         "badge": "AZURE",
         "title": "Cloud Fundamentals Track",
         "issuer": "Microsoft Learn"
       },
+      "certification3":
       {
         "badge": "DATA",
         "title": "Azure Data Foundations Track",
         "issuer": "Microsoft Learn"
       },
+      "certification4":
       {
         "badge": "POWER",
         "title": "Power BI Reporting Track",
         "issuer": "Microsoft Learn"
       }
-    ]
+    }
   },
   "experience": {
-    "title": "7-year industry trajectory",
-    "subtitle": "Hands-on delivery across telecommunications and automotive, building technical solutions focused on performance, reliability and operational scale.",
-    "timelineTitle": "2018 -> 2025",
+    "title": "10-year industry trajectory",
+    "subtitle": "Hands-on delivery across automotive, mechanical simulation, telecommunications and developing, building technical solutions focused on performance, reliability and operational scale.",
+    "timelineTitle": "2015 -> 2025",
     "telecomTitle": "Telecommunications",
     "telecomDetail": "Implementation of connected solutions for high-availability operations and critical response-time environments.",
     "automotiveTitle": "Automotive",

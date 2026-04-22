@@ -12,7 +12,7 @@ import {
 } from "@/components/templates";
 import type { CertificationSlideItem } from "@/components/organisms/CertificationSlider";
 import type { AppLocale } from "@/i18n/routing";
-import { link } from "fs";
+import { getPublicUrl } from "@/lib/supabase";
 
 interface LocaleHomePageProps {
   params: Promise<{ locale: AppLocale }>;
@@ -40,7 +40,9 @@ export const resolveIdentityTranslation = (
   }
 };
 
-const parseIdentityBullet = (line: string): { title: string; value: string } => {
+const parseIdentityBullet = (
+  line: string,
+): { title: string; value: string } => {
   const boldOutsideColon = line.match(/^\*\*([^*]+)\*\*:\s*(.+)$/);
   if (boldOutsideColon) {
     return {
@@ -88,79 +90,93 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
     tStory,
     tProfileStory,
     tIdentitySnapshot,
-  ] =
-    await Promise.all([
-      getCertificationsCatalog(),
-      getIdentitySnapshot(),
-      getProfileStoryPhases(),
-      getTechnicalSnapshot(),
-      getProjectCatalog(),
-      getTranslations({ locale, namespace: "profile" }),
-      getTranslations({ locale, namespace: "hero" }),
-      getTranslations({ locale, namespace: "controls" }),
-      getTranslations({ locale, namespace: "certifications" }),
-      getTranslations({ locale, namespace: "experience" }),
-      getTranslations({ locale, namespace: "story" }),
-      getTranslations({ locale, namespace: "profileStory" }),
-      getTranslations({ locale, namespace: "identitySnapshot" }),
-    ]);
-  const profileStoryPhases = profileStoryPhasesRaw.map((phase) => ({
-    ...phase,
-    stage: tProfileStory(phase.stage),
-    title: tProfileStory(phase.title),
-    description: tProfileStory(phase.description),
-  }));
+  ] = await Promise.all([
+    getCertificationsCatalog(),
+    getIdentitySnapshot(),
+    getProfileStoryPhases(),
+    getTechnicalSnapshot(),
+    getProjectCatalog(),
+    getTranslations({ locale, namespace: "profile" }),
+    getTranslations({ locale, namespace: "hero" }),
+    getTranslations({ locale, namespace: "controls" }),
+    getTranslations({ locale, namespace: "certifications" }),
+    getTranslations({ locale, namespace: "experience" }),
+    getTranslations({ locale, namespace: "story" }),
+    getTranslations({ locale, namespace: "profileStory" }),
+    getTranslations({ locale, namespace: "identitySnapshot" }),
+  ]);
+  const profileStoryPhases = await Promise.all(
+    profileStoryPhasesRaw.map(async (phase) => {
+      const gallery = await Promise.all(
+        phase.imageGallery.map(async (image) => getPublicUrl(image))
+      );
+      const backGroundImage = await Promise.resolve(
+        getPublicUrl(phase.backgroundLayer),
+      );
+      const floating = await Promise.resolve(
+        getPublicUrl(phase.floatingElement)
+      )
+      return {
+        ...phase,
+        imageGallery: gallery,
+        backgroundLayer: backGroundImage,
+        floatingElement: floating,
+        stage: tProfileStory(phase.stage),
+        title: tProfileStory(phase.title),
+        description: tProfileStory(phase.description),
+      };
+    }),
+  );
 
-  const certificationItems: CertificationSlideItem[] = certificationsCatalog.map(
-    (item, index) => ({
+  const certificationItems: CertificationSlideItem[] =
+    certificationsCatalog.map((item, index) => ({
       id: item.id,
       badge: item.category,
       title: item.name,
       issuer: item.issuer,
       imageUrl: item.firebaseImageUrl,
       skills: item.skills,
-      dotLabel: tCertifications("dotLabel", { index: index + 1, title: item.name }),
-    }),
-  );
-
+      dotLabel: tCertifications("dotLabel", {
+        index: index + 1,
+        title: item.name,
+      }),
+    }));
 
   const identityHighlights = (identitySnapshot.match(/^\s*-\s+.+$/gm) ?? [])
     .slice(0, 4)
-    .map((line: string) => line.replace(/^\s*-\s*/, "")
-    .trim())
+    .map((line: string) => line.replace(/^\s*-\s*/, "").trim())
     .map((line: string) => parseIdentityBullet(line))
     .map((item) => {
       const title = resolveIdentityTranslation(item.title, tIdentitySnapshot);
       const value = resolveIdentityTranslation(item.value, tIdentitySnapshot);
       let links = undefined;
-      
-try {
-        // Buscamos la llave del array de links en tus archivos .json
-        const rawLinks = tIdentitySnapshot.raw('identity.contact.links');
-        if (item.title.toLocaleLowerCase().includes('contact')) {
-          links = rawLinks.map((link: {title:string, value: string}) => ({
-            title: link.title, // Ya viene del .json traducido
-            value: link.value  // La URL
+
+      try {
+        const rawLinks = tIdentitySnapshot.raw("identity.contact.links");
+        if (item.title.toLocaleLowerCase().includes("contact")) {
+          links = rawLinks.map((link: { title: string; value: string }) => ({
+            title: link.title,
+            value: link.value,
           }));
         }
       } catch (e) {
         console.error("Error cargando links desde el json de traducción", e);
       }
-      console.log(links)
       return {
         title,
-        value, 
-        links
+        value,
+        links,
       };
     });
 
   const stackHighlights = (technicalSnapshot.match(/^\s*-\s+.+$/gm) ?? [])
     .slice(0, 4)
-    .map((line: string) => line
-    .replace(/^\s*-\s*/, "")
-    .replace(/^\*\*([\w\s\d]+):\*\*/, "\n$1:")
-    .trim()
-  );
+    .map((line: string) =>
+      line
+        .replace(/^\s*-\s*/, "")
+        .replace(/^\*\*([\w\s\d]+):\*\*/, "\n$1:")
+        .trim(),
+    );
 
   const content: PortfolioHomeTemplateContent = {
     badge: tHero("badge"),

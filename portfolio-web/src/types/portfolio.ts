@@ -7,6 +7,7 @@ export interface CatalogProject {
   visual: string;
   imageUrl: string;
   videoUrl: string;
+  linkToProject: string;
 }
 
 export interface CatalogRawProject {
@@ -16,6 +17,7 @@ export interface CatalogRawProject {
   visual: string;
   image_url: string;
   video_url: string;
+  link: string;
 }
 
 export interface CatalogSource {

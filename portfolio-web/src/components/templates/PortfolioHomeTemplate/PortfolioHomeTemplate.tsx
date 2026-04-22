@@ -16,9 +16,15 @@ import type { CertificationSlideItem } from "@/components/organisms/Certificatio
 import type { CatalogProject, ProfileStoryPhase } from "@/types/portfolio";
 import { IDENTITY } from "@/constants/identity";
 import { getPublicUrl } from "@/lib/supabase";
+import Image from "next/image";
+interface Link {
+  title: string;
+  value: string;
+}
 interface IdentityHighlightItem {
   title: string;
   value: string;
+  links: Link[];
 }
 
 export interface PortfolioHomeTemplateContent {
@@ -81,7 +87,7 @@ export async function PortfolioHomeTemplate({
   profileTitle,
   content,
 }: PortfolioHomeTemplateProps) {
-  const avatarUrl = await getPublicUrl(IDENTITY.personal.avatarPath)
+  const avatarUrl = await getPublicUrl(IDENTITY.personal.avatarPath);
   const projectWithImagesURLs = await Promise.all(
     projects.map(async (project) => {
       const image = await getPublicUrl(project.imageUrl);
@@ -94,6 +100,32 @@ export async function PortfolioHomeTemplate({
     }),
   );
 
+  const contactItems = (
+    data: IdentityHighlightItem,
+  ): string | React.ReactNode => {
+    if (!data.title.toLocaleLowerCase().includes("contact")) return data.value;
+    return (
+      <ul className="contact-info">
+        {data.links.map((link, index) => (
+          <div key={index} className="contact-item">
+            <li className="content">
+              <span>{link.title}: </span>
+              <a
+                href={
+                  link.title.toLocaleLowerCase() === "email"
+                    ? `mailto:${link.value}`
+                    : link.value
+                }
+                target="_blank"
+              >
+                {link.value}
+              </a>
+            </li>
+          </div>
+        ))}
+      </ul>
+    );
+  };
   return (
     <div className="relative isolate min-h-screen bg-background text-foreground">
       <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-70">
@@ -146,7 +178,7 @@ export async function PortfolioHomeTemplate({
               <span className="mx-2 text-accent-strong">|</span>
               {profileTitle}
             </p>
-            <div className="flex flex-wrap gap-3 text-xs uppercase tracking-widest text-muted text-shadow-amber-50">
+            <div className="flex flex-wrap gap-3 text-xs uppercase tracking-widest text-muted text-shadow-amber-50 justify-center md:justify-start">
               <Pill variant="tag">Angular</Pill>
               <Pill variant="tag">Figma Design</Pill>
               <Pill variant="tag">Python</Pill>
@@ -166,6 +198,15 @@ export async function PortfolioHomeTemplate({
             <p className="text-sm uppercase tracking-[0.18em] text-accent-strong">
               {content.identity}
             </p>
+            <div className="image-container">
+              <Image
+                className="card-image"
+                src={avatarUrl}
+                alt="Image Profile"
+                width={110}
+                height={150}
+              />
+            </div>
             <ul className="space-y-3 text-sm leading-7 text-muted">
               {identityHighlights.map((item) => (
                 <li
@@ -176,13 +217,26 @@ export async function PortfolioHomeTemplate({
                     {item.title}:
                   </strong>
                   <br />
-                  {item.value ? ` ${item.value}` : ""}
+                  {contactItems(item)}
                 </li>
               ))}
             </ul>
           </aside>
         </section>
 
+        <section className="space-y-6">
+          <div className="flex items-end justify-between gap-4">
+            <SectionTitle eyebrow={content.catalogSource}>
+              {content.catalog}
+            </SectionTitle>
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {projectWithImagesURLs.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        </section>
+        <ProfileVisualNarrative phases={profileStoryPhases} />
         <ExperienceParallaxSection content={content.experience} />
 
         <section className="space-y-6">
@@ -201,8 +255,6 @@ export async function PortfolioHomeTemplate({
 
         <StoryTransitionSection content={content.story} />
 
-        <ProfileVisualNarrative phases={profileStoryPhases} />
-
         <CertificationSlider
           eyebrow={content.certifications.eyebrow}
           title={content.certifications.title}
@@ -213,19 +265,6 @@ export async function PortfolioHomeTemplate({
           items={content.certifications.items}
           autoPlay
         />
-
-        <section className="space-y-6">
-          <div className="flex items-end justify-between gap-4">
-            <SectionTitle eyebrow={content.catalogSource}>
-              {content.catalog}
-            </SectionTitle>
-          </div>
-          <div className="grid gap-5 md:grid-cols-3">
-            {projectWithImagesURLs.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
-        </section>
       </main>
     </div>
   );
