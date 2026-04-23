@@ -204,10 +204,14 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
       title: tExperience("title"),
       subtitle: tExperience("subtitle"),
       timelineTitle: tExperience("timelineTitle"),
-      telecomTitle: tExperience("telecomTitle"),
-      telecomDetail: tExperience("telecomDetail"),
+      developmentTitle: tExperience("developmentTitle"),
+      developmentDetail: tExperience("developmentDetail"),
       automotiveTitle: tExperience("automotiveTitle"),
       automotiveDetail: tExperience("automotiveDetail"),
+      simulationTitle: tExperience("simulationTitle"),
+      simulationDetail:tExperience("simulationDetail"),
+      dataScientistTitle: tExperience("dataScienceTitle"),
+      dataScientistDetail: tExperience("dataScienceDetail")
     },
     story: {
       title: tStory("title"),

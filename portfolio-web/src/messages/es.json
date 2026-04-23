@@ -56,10 +56,14 @@
     "title": "Trayectoria de 10 años en industria",
     "subtitle": "Experiencia acumulada en telecomunicaciones y automotriz, construyendo soluciones técnicas con foco en rendimiento, confiabilidad y escalabilidad operativa.",
     "timelineTitle": "2015 -> 2025",
-    "telecomTitle": "Telecomunicaciones",
-    "telecomDetail": "Implementation de soluciones conectadas para operaciones de alta disponibilidad y tiempos de respuesta críticos.",
+    "developmentTitle": "Desarrollo de software",
+    "developmentDetail": "Implementation de soluciones conectadas para operaciones de alta disponibilidad y tiempos de respuesta críticos.",
     "automotiveTitle": "Automotriz",
-    "automotiveDetail": "Ingeniería aplicada para procesos industriales, integration de sistemas y mejora continua orientada a negocio."
+    "automotiveDetail": "Ingeniería aplicada para procesos industriales, integration de sistemas y mejora continua orientada a negocio.",
+    "simulationTitle": "CAD - FEM SolidWorks",
+    "simulationDetail": "Diseño mecánico de componentes de producción en linea y pruebas de estrés para mejora continua",
+    "dataScienceTitle": "Data Scientist",
+    "dataScienceDetail": "Análisis de bases de datos empleado modelos de aprendizaje auto ajustables para optimización de procesos y reducción de costos"
   },
   "story": {
     "title": "Historia y giro hacia Data Science",

@@ -30,27 +30,22 @@
     "statusLabel": "Active now",
     "dotLabel": "Go to certification {index}: {title}",
     "items": {
-  
-      "certification1":
-      {
+      "certification1": {
         "badge": "EGADE",
         "title": "Business Analytics Candidate",
         "issuer": "EGADE Business School"
       },
-      "certification2":
-      {
+      "certification2": {
         "badge": "AZURE",
         "title": "Cloud Fundamentals Track",
         "issuer": "Microsoft Learn"
       },
-      "certification3":
-      {
+      "certification3": {
         "badge": "DATA",
         "title": "Azure Data Foundations Track",
         "issuer": "Microsoft Learn"
       },
-      "certification4":
-      {
+      "certification4": {
         "badge": "POWER",
         "title": "Power BI Reporting Track",
         "issuer": "Microsoft Learn"
@@ -61,10 +56,14 @@
     "title": "10-year industry trajectory",
     "subtitle": "Hands-on delivery across automotive, mechanical simulation, telecommunications and developing, building technical solutions focused on performance, reliability and operational scale.",
     "timelineTitle": "2015 -> 2025",
-    "telecomTitle": "Telecommunications",
-    "telecomDetail": "Implementation of connected solutions for high-availability operations and critical response-time environments.",
+    "developmentTitle": "Software Development",
+    "developmentDetail": "Implementation of connected solutions for high-availability operations and critical response-time environments.",
     "automotiveTitle": "Automotive",
-    "automotiveDetail": "Applied engineering for industrial processes, systems integration and continuous improvement aligned with business impact."
+    "automotiveDetail": "Applied engineering for industrial processes, systems integration and continuous improvement aligned with business impact.",
+    "simulationTitle": "CAD - FEM SolidWorks",
+    "simulationDetail": "Mechanical design of in-line production components and stress testing for continuous improvement",
+    "dataScienceTitle": "Data Scientist",
+    "dataScienceDetail": "Database analysis using self-adjusting learning models for process optimization and cost reduction"
   },
   "story": {
     "title": "Story and Data Science transition",
@@ -114,18 +113,18 @@
         "title": "Contact",
         "value": "",
         "links": [
-           {
-          "title": "LinkedIn",
-          "value": "https://www.linkedin.com/in/josé-manuel-cabrera-rojas"
-        },
-        {
-          "title": "GitHub",
-          "value": "https://github.com/JManuelCR"
-        },
-        {
-          "title": "Email",
-          "value": "josemanuelcabrera2011@gmail.com"
-        }
+          {
+            "title": "LinkedIn",
+            "value": "https://www.linkedin.com/in/josé-manuel-cabrera-rojas"
+          },
+          {
+            "title": "GitHub",
+            "value": "https://github.com/JManuelCR"
+          },
+          {
+            "title": "Email",
+            "value": "josemanuelcabrera2011@gmail.com"
+          }
         ]
       }
     }

@@ -56,10 +56,14 @@ export interface PortfolioHomeTemplateContent {
     title: string;
     subtitle: string;
     timelineTitle: string;
-    telecomTitle: string;
-    telecomDetail: string;
+    developmentTitle: string;
+    developmentDetail: string;
     automotiveTitle: string;
     automotiveDetail: string;
+    simulationTitle: string;
+    simulationDetail: string;
+    dataScientistTitle: string;
+    dataScientistDetail: string;
   };
   story: {
     title: string;
