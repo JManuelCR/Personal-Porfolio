@@ -17,6 +17,18 @@ import { getPublicUrl } from "@/lib/supabase";
 interface LocaleHomePageProps {
   params: Promise<{ locale: AppLocale }>;
 }
+interface Skill {
+  title: string;
+  description: string;
+}
+
+interface TechnicalSnapshot {
+  skills: Record<string, Skill>;
+}
+
+interface RootObject {
+  technical_north: TechnicalSnapshot;
+}
 
 const normalizeI18nKey = (value: string): string => {
   return value.trim().replace(/[.,;:!?]+$/g, "");
@@ -80,7 +92,7 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
     certificationsCatalog,
     identitySnapshot,
     profileStoryPhasesRaw,
-    technicalSnapshot,
+    tTechnicalSnapshot,
     catalog,
     tProfile,
     tHero,
@@ -94,7 +106,7 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
     getCertificationsCatalog(),
     getIdentitySnapshot(),
     getProfileStoryPhases(),
-    getTechnicalSnapshot(),
+    getTranslations({ locale, namespace: "technicalSnapshot" }),
     getProjectCatalog(),
     getTranslations({ locale, namespace: "profile" }),
     getTranslations({ locale, namespace: "hero" }),
@@ -167,14 +179,16 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
       };
     });
 
-  const stackHighlights = (technicalSnapshot.match(/^\s*-\s+.+$/gm) ?? [])
-    .slice(0, 10)
-    .map((line: string) =>
-      line
-        .replace(/^\s*-\s*/, "")
-        .replace(/^\*\*([\w\s\d]+):\*\*/, "\n$1:")
-        .trim(),
-    );
+  const stackHighlights = await (async() => { 
+    const skills = await Promise.resolve(getTechnicalSnapshot());
+    const skillDictionary:RootObject = JSON.parse(skills)
+    const skillsObject = skillDictionary.technical_north.skills;
+    const skillArray = Object.values(skillsObject)
+    return skillArray.map((skill) => ({
+      title: tTechnicalSnapshot(skill.title),
+      description: tTechnicalSnapshot(skill.description)
+    }))
+  })();
 
   const content: PortfolioHomeTemplateContent = {
     badge: tHero("badge"),
@@ -204,10 +218,14 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
       title: tExperience("title"),
       subtitle: tExperience("subtitle"),
       timelineTitle: tExperience("timelineTitle"),
-      telecomTitle: tExperience("telecomTitle"),
-      telecomDetail: tExperience("telecomDetail"),
+      developmentTitle: tExperience("developmentTitle"),
+      developmentDetail: tExperience("developmentDetail"),
       automotiveTitle: tExperience("automotiveTitle"),
       automotiveDetail: tExperience("automotiveDetail"),
+      simulationTitle: tExperience("simulationTitle"),
+      simulationDetail:tExperience("simulationDetail"),
+      dataScientistTitle: tExperience("dataScienceTitle"),
+      dataScientistDetail: tExperience("dataScienceDetail")
     },
     story: {
       title: tStory("title"),
