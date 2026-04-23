@@ -128,5 +128,85 @@
         ]
       }
     }
+  },
+  "technicalSnapshot": {
+    "skills": {
+      "skill1": {
+        "title": "Senior Angular",
+        "description": "Large-scale architectures with RxJS for reactive flows and Signals for cutting-edge performance."
+      },
+      "skill2": {
+        "title": "Modern React Development",
+        "description": "Developing high-performance applications with React 19"
+      },
+      "skill3": {
+        "title": "NextJS Development",
+        "description": "Development with Next.js (App Router) for SEO and UX optimization."
+      },
+      "skill4": {
+        "title": "Synergy between code and design with Figma",
+        "description": "Workflow integrated with Figma, translating complex design systems into living components with high fidelity."
+      },
+      "skill5": {
+        "title": "Atomic and stylish design",
+        "description": "Building scalable UI libraries using Tailwind CSS and Design Tokens methodologies."
+      },
+      "skill6": {
+        "title": "NodeJS",
+        "description": "Development of efficient services with Node.js and FastAPI, focused on scalability and low latency."
+      },
+      "skill7": {
+        "title": "SQL Modeling",
+        "description": "Design of PostgreSQL structures optimized for transactional integrity and data analysis."
+      },
+      "skill8": {
+        "title": "Data Tools",
+        "description": "Data processing and cleaning using the scientific Python stack (Pandas, NumPy)."
+      },
+      "skill9": {
+        "title": "CI/CD",
+        "description": "Integration strategy based on clear contracts, monitoring and traceability of services. Stability guarantee through CI/CD flows, Vitest for logic and Storybook for UI documentation"
+      },
+      "skill10": {
+        "title": "Azure",
+        "description": "Implementation of cloud-native solutions and infrastructure management within the Microsoft Azure ecosystem."
+      },
+      "skill11": {
+        "title": "AWS",
+        "description": "Implementation of AWS solutions such as IAM, SES, EC2, S3, CodePipeline for service deployment"
+      },
+      "skill12": {
+        "title": "Modern Deployments",
+        "description": "Optimized workflows in Vercel and multimedia resource management in Firebase to maintain lightweight bundles."
+      },
+      "skill13": {
+        "title": "Quality Assurance",
+        "description": "Ensuring stability through CI/CD pipelines, Vitest for logic, and Storybook for UI documentation."
+      },
+      "skill14": {
+        "title": "Immersive Experiences",
+        "description": "Advanced visual refinement using Framer Motion and Lenis for premium interactive experiences."
+      },
+      "skill15": {
+        "title": "Clean architecture",
+        "description": "Focus on maintainability and decoupling to enable constant software evolution."
+      },
+      "skill16": {
+        "title": "Technical Associate",
+        "description": "Facilitator between design (Figma), product vision and technical engineering execution."
+      },
+      "skill17": {
+        "title": "Multicultural Collaboration",
+        "description": "Raising client requirements to transfer them to the work team"
+      },
+      "skill18": {
+        "title": "Leadership skills",
+        "description": "Coordination of work teams implementing team collaboration techniques to achieve objectives"
+      },
+      "skill19": {
+        "title": "Troubleshooting",
+        "description": "Coordination of work teams implementing team collaboration techniques to achieve objectives"
+      }
+    }
   }
 }

@@ -1,0 +1,83 @@
+{
+  "technical_north": {
+    "skills": {
+      "skill1": {
+        "title": "skills.skill1.title",
+        "description": "skills.skill1.description"
+      },
+      "skill2": {
+        "title": "skills.skill2.title",
+        "description": "skills.skill2.description"
+      },
+      "skill3": {
+        "title": "skills.skill3.title",
+        "description": "skills.skill3.description"
+      },
+      "skill4": {
+        "title": "skills.skill4.title",
+        "description": "skills.skill4.description"
+      },
+      "skill5": {
+        "title": "skills.skill5.title",
+        "description": "skills.skill5.description"
+      },
+      "skill11": {
+        "title": "skills.skill6.title",
+        "description": "skills.skill6.description"
+      },
+      "skill6": {
+        "title": "skills.skill7.title",
+        "description": "skills.skill7.description"
+      },
+      "skill7": {
+        "title": "skills.skill8.title",
+        "description": "skills.skill8.description"
+      },
+      "skill8": {
+        "title": "skills.skill9.title",
+        "description": "skills.skill9.description"
+      },
+      "skill9": {
+        "title": "skills.skill10.title",
+        "description": "skills.skill10.description"
+      },
+      "skill10": {
+        "title": "skills.skill11.title",
+        "description": "skills.skill11.description"
+      },
+      "skill12": {
+        "title": "skills.skill12.title",
+        "description": "skills.skill12.description"
+      },
+      "skill13": {
+        "title": "skills.skill13.title",
+        "description": "skills.skill13.description"
+      },
+      "skill14": {
+        "title": "skills.skill14.title",
+        "description": "skills.skill14.description"
+      },
+      "skill15": {
+        "title": "skills.skill15.title",
+        "description": "skills.skill15.description"
+      },
+      "skill16": {
+        "title": "skills.skill16.title",
+        "description": "skills.skill16.description"
+      },
+      "skill17": {
+        "title": "skills.skill17.title",
+        "description": "skills.skill17.description"
+      },
+      "skill18": {
+        "title": "skills.skill18.title",
+        "description": "skills.skill18.description"
+      },
+      "skill19": {
+        "title": "skills.skill19.title",
+        "description": "skills.skill19.description"
+      }
+
+    }
+  }
+}

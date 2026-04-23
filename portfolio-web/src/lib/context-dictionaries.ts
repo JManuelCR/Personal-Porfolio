@@ -66,5 +66,5 @@ export async function getIdentitySnapshot(): Promise<string> {
 }
 
 export async function getTechnicalSnapshot(): Promise<string> {
-  return readDictionary("technical-skills.md");
+  return readDictionary("technical-skills.json");
 }

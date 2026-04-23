@@ -73,9 +73,14 @@ export interface PortfolioHomeTemplateContent {
   };
 }
 
+interface Skill {
+  title: string;
+  description: string;
+}
+
 interface PortfolioHomeTemplateProps {
   identityHighlights: IdentityHighlightItem[];
-  stackHighlights: string[];
+  stackHighlights: Skill[];
   profileStoryPhases: ProfileStoryPhase[];
   projects: CatalogProject[];
   profileName: string;
@@ -216,23 +221,6 @@ export async function PortfolioHomeTemplate({
         </section>
         <ProfileVisualNarrative phases={profileStoryPhases} />
         <ExperienceParallaxSection content={content.experience} />
-
-        <section className="space-y-6">
-          <SectionTitle>{content.technical}</SectionTitle>
-          <div className="grid gap-4 md:grid-cols-2">
-            {stackHighlights.map((item) => (
-              <article
-                key={item}
-                className="surface-card rounded-2xl p-5 text-sm leading-7 text-muted"
-              >
-                {item}
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <StoryTransitionSection content={content.story} />
-
         <CertificationSlider
           eyebrow={content.certifications.eyebrow}
           title={content.certifications.title}
@@ -243,6 +231,23 @@ export async function PortfolioHomeTemplate({
           items={content.certifications.items}
           autoPlay
         />
+        <StoryTransitionSection content={content.story} />
+        <section className="space-y-6">
+          <SectionTitle>{content.technical}</SectionTitle>
+          <div className="grid gap-4 md:grid-cols-2">
+            {stackHighlights.map((item, index) => (
+              <article
+                key={index}
+                className="flex flex-col gap-2 surface-card rounded-2xl p-5 text-sm leading-7 text-muted"
+              >
+                <strong className="text-lg font-bold text-accent-strong">
+                  {item.title}
+                </strong>
+                <span>{item.description}</span>
+              </article>
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   );

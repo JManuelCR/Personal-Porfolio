@@ -112,20 +112,100 @@
       "contact": {
         "title": "Contact",
         "value": "",
-        "links":[
-           {
-          "title": "LinkedIn",
-          "value": "https://www.linkedin.com/in/josé-manuel-cabrera-rojas"
-        },
-        {
-          "title": "GitHub",
-          "value": "https://github.com/JManuelCR"
-        },
-        {
-          "title": "Email",
-          "value": "josemanuelcabrera2011@gmail.com"
-        }
+        "links": [
+          {
+            "title": "LinkedIn",
+            "value": "https://www.linkedin.com/in/josé-manuel-cabrera-rojas"
+          },
+          {
+            "title": "GitHub",
+            "value": "https://github.com/JManuelCR"
+          },
+          {
+            "title": "Email",
+            "value": "josemanuelcabrera2011@gmail.com"
+          }
         ]
+      }
+    }
+  },
+  "technicalSnapshot": {
+    "skills": {
+      "skill1": {
+        "title": "Senior Angular",
+        "description": "Arquitecturas de gran escala con RxJS para flujos reactivos y Signals para un rendimiento de vanguardia."
+      },
+      "skill2": {
+        "title": "Desarrollo React Moderno",
+        "description": "Desarrollo de aplicaciones de alto rendimiento con React 19"
+      },
+      "skill3": {
+        "title": "Desarrollo NextJS",
+        "description": "Desarrollo con Next.js (App Router) para optimización de SEO y UX."
+      },
+      "skill4": {
+        "title": "Sinergia en tre código y diseño con Figma",
+        "description": "Flujo de trabajo integrado con Figma, traduciendo sistemas de diseño complejos en componentes vivos con alta fidelidad."
+      },
+      "skill5": {
+        "title": "Diseño atómico y estilado",
+        "description": "Construcción de librerías de UI escalables mediante Tailwind CSS y metodologías de Design Tokens."
+      },
+      "skill6": {
+        "title": "NodeJS",
+        "description": "Desarrollo de servicios eficientes con Node.js y FastAPI, enfocados en la escalabilidad y baja latencia."
+      },
+      "skill7": {
+        "title": "SQL Modeling",
+        "description": "Diseño de estructuras en PostgreSQL optimizadas para integridad transaccional y análisis de datos."
+      },
+      "skill8": {
+        "title": "Herramientas de datos",
+        "description": "Procesamiento y limpieza de datos mediante el stack científico de Python (Pandas, NumPy)."
+      },
+      "skill9": {
+        "title": "CI/CD",
+        "description": "Estrategia de integración basada en contratos claros, monitoreo y trazabilidad de servicios.Garantía de estabilidad mediante flujos de CI/CD, Vitest para lógica y Storybook para documentación de UI"
+      },
+      "skill10": {
+        "title": "Azure",
+        "description": "Implementación de soluciones cloud-native y gestión de infraestructura dentro del ecosistema Microsoft Azure."
+      },
+      "skill11": {
+        "title": "AWS",
+        "description": "Implementation de soluciones de AWS como IAM, SES, EC2, S3, CodePipeline para el despliegue de servicios"
+      },
+      "skill12": {
+        "title": "Despliegues Modernos",
+        "description": "Workflows optimizados en Vercel y gestión de recursos multimedia en Firebase para mantener bundles ligeros."
+      },
+      "skill13": {
+        "title": "Quality Assurance",
+        "description": "Garantía de estabilidad mediante flujos de CI/CD, Vitest para lógica y Storybook para documentación de UI."
+      },
+      "skill14": {
+        "title": "Experiencias Inmersivas",
+        "description": "Refinamiento visual avanzado mediante Framer Motion y Lenis para experiencias interactivas premium."
+      },
+      "skill15": {
+        "title": "Arquitectura limpia",
+        "description": "Enfoque en la mantenibilidad y el desacoplamiento para permitir la evolución constante del software."
+      },
+      "skill16": {
+        "title": "Asociado técnico",
+        "description": "Facilitador entre el diseño (Figma), la visión de producto y la ejecución técnica de ingeniería.."
+      },
+      "skill17": {
+        "title": "Colaboración Multicultural",
+        "description": "Levantamiento de requerimientos del cliente para trasladarlos al equipo de trabajo"
+      },
+      "skill18": {
+        "title": "Habilidades de liderazgo",
+        "description": "Coordination de equipos de trabajo implementando técnicas colaboración en equipo para alcanzar lo objetivos"
+      },
+      "skill19": {
+        "title": "Resolución de problemas",
+        "description": "Coordination de equipos de trabajo implementando técnicas colaboración en equipo para alcanzar lo objetivos"
       }
     }
   }
